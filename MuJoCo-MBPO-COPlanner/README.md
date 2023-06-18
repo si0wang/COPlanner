@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0 nohup python main_mbpo.py --env_name 'Walker2d-v2' --num_epoch 300 --model_type 'pytorch' --exp_name walker --seed 0 --conservative_rate 2 --optimistic_rate 1 --ntraj 5 --planning_horizon 5

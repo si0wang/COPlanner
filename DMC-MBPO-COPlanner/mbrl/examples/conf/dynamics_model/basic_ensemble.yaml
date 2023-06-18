@@ -1,0 +1,16 @@
+# @package _group_
+_target_: mbrl.models.BasicEnsemble
+ensemble_size: 5
+device: ${device}
+propagation_method: fixed_model
+member_cfg:
+  _target_: mbrl.models.GaussianMLP
+  device: ${device}
+  num_layers: 4
+  in_size: ???
+  out_size: ???
+  hid_size: 200
+  deterministic: false
+  activation_fn_cfg:
+    _target_: torch.nn.SiLU
+  

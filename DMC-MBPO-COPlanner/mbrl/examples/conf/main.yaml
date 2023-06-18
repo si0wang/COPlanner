@@ -1,0 +1,24 @@
+defaults:
+  - algorithm: mbpo
+  - dynamics_model: gaussian_mlp_ensemble
+  - overrides: mbpo_walker_run
+  - action_optimizer: cem
+
+seed: 0
+device: "cuda:0"
+log_frequency_agent: 1000
+save_video: false
+debug_mode: false
+is_mpc: 0
+
+experiment: default
+
+#root_dir: "./exp"
+save_dir: './exp_mpc_rollout/'
+exp_name: 'cheetah_run_mbpo_0'
+hydra:
+  run:
+    dir: ${save_dir}/${exp_name}
+
+  sweep:
+    dir: ${root_dir}/${exp_name}
