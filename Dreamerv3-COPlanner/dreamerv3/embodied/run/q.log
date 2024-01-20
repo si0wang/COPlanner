@@ -1,0 +1,1940 @@
+Encoder CNN shapes: {'image': (64, 64, 3)}
+Encoder MLP shapes: {}
+Decoder CNN shapes: {'image': (64, 64, 3)}
+Decoder MLP shapes: {}
+JAX devices (1): [gpu(id=0)]
+Policy devices: gpu:0
+Train devices:  gpu:0
+Tracing train function.
+Optimizer model_opt has 15,690,883 variables.
+{'action': Traced<ShapedArray(float32[15,1024,12])>with<DynamicJaxprTrace(level=1/0)>, 'deter': Traced<ShapedArray(float16[15,1024,512])>with<DynamicJaxprTrace(level=1/0)>, 'logit': Traced<ShapedArray(float16[15,1024,32,32])>with<DynamicJaxprTrace(level=1/0)>, 'stoch': Traced<ShapedArray(float16[15,1024,32,32])>with<DynamicJaxprTrace(level=1/0)>}
+{'action': Traced<ShapedArray(float32[15,1024,12])>with<JVPTrace(level=3/0)> with
+  primal = Traced<ShapedArray(float32[15,1024,12])>with<DynamicJaxprTrace(level=1/0)>
+  tangent = Traced<ShapedArray(float32[15,1024,12])>with<JaxprTrace(level=2/0)> with
+    pval = (ShapedArray(float32[15,1024,12]), None)
+    recipe = JaxprEqnRecipe(eqn_id=<object object at 0x7fce4043af30>, in_tracers=(Traced<ShapedArray(float32[1,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[512,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[512,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[512,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[1036,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[1024,1536]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1,1536]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[512,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[512,1024]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1024,32,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1536,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1024,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[1024,32,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[1024,32,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1,1024,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,1536]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1536]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1536]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,32,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,32,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,32,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,32,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,32,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(bool[15,1024,32,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,32,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,32,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,32,1]):JaxprTrace(level=2/0)>), out_tracer_refs=[<weakref at 0x7fce4017ff90; dead>, <weakref at 0x7fce4017fd60; dead>, <weakref at 0x7fce4017fef0; dead>, <weakref at 0x7fce4017fe50; dead>, <weakref at 0x7fce4017fea0; to 'JaxprTracer' at 0x7fce4017f9f0>, <weakref at 0x7fce40185950; to 'JaxprTracer' at 0x7fce4017fae0>, <weakref at 0x7fce401859a0; to 'JaxprTracer' at 0x7fce4017f770>, <weakref at 0x7fce40185860; to 'JaxprTracer' at 0x7fce4017f5e0>], out_avals=[ShapedArray(float32[1024,12]), ShapedArray(float16[1024,512]), ShapedArray(float16[1024,32,32]), ShapedArray(float16[1024,32,32]), ShapedArray(float32[15,1024,12]), ShapedArray(float16[15,1024,512]), ShapedArray(float16[15,1024,32,32]), ShapedArray(float16[15,1024,32,32])], primitive=scan, params={'reverse': False, 'length': 15, 'unroll': 1, 'jaxpr': { lambda ; a:f32[1,512] b:f16[512,512] c:f32[1,512] d:f16[512,12] e:f16[512,12] f:f16[1036,512]
+    g:f32[1,512] h:f16[1024,1536] i:f32[1,1536] j:f16[512,512] k:f32[1,512] l:f16[512,1024]
+    m:f32[1024,32,1] n:f32[1536,512] o:f32[512] p:f32[512] q:f32[512,512] r:f32[512]
+    s:f32[512] t:f32[512,12] u:f32[12] v:f32[512,12] w:f32[12] x:f32[1024,12] y:f16[1024,512]
+    z:f16[1024,32,32] ba:f16[1024,32,32] bb:f32[1,1024,12] bc:f16[1024,1536] bd:f32[1024,1]
+    be:f32[1024,512] bf:f32[1024,512] bg:f32[1024,1] bh:f32[1024,1] bi:f32[1024,512]
+    bj:f16[1024,512] bk:f16[1024,512] bl:f16[1024,512] bm:f16[1024,512] bn:f32[1024,1]
+    bo:f32[1024,512] bp:f32[1024,512] bq:f32[1024,1] br:f32[1024,1] bs:f32[1024,512]
+    bt:f16[1024,512] bu:f16[1024,512] bv:f16[1024,512] bw:f16[1024,512] bx:f32[1024,12]
+    by:f32[1024,12] bz:f32[1024,12] ca:f16[1024,12] cb:f32[1024,1] cc:f32[1024,512]
+    cd:f32[1024,512] ce:f32[1024,1] cf:f32[1024,1] cg:f16[1024,512] ch:f16[1024,512]
+    ci:f16[1024,512] cj:f32[1024,1] ck:f32[1024,1536] cl:f32[1024,1536] cm:f32[1024,1]
+    cn:f32[1024,1] co:f16[1024,512] cp:f16[1024,512] cq:f16[1024,512] cr:f16[1024,512]
+    cs:f16[1024,512] ct:f16[1024,512] cu:f16[1024,512] cv:f16[1024,512] cw:f16[1024,512]
+    cx:f32[1024,1] cy:f32[1024,512] cz:f32[1024,512] da:f32[1024,1] db:f32[1024,1]
+    dc:f16[1024,512] dd:f16[1024,512] de:f16[1024,512] df:f16[1024,32,32] dg:f16[1024,32,1]
+    dh:f16[1024,32,1] di:f16[1024,32,32] dj:f32[1024,32,32] dk:f32[1024,32] dl:bool[1024,32,1]
+    dm:f32[1024,32,32] dn:f32[1024,32,1] do:f32[1024,32,1]. let
+    dp:f16[1536,512] = convert_element_type[new_dtype=float16 weak_type=False] n
+    dq:f16[1024,512] = dot_general[dimension_numbers=(([1], [0]), ([], []))] bc dp
+    dr:f32[1024,512] = convert_element_type[new_dtype=float32 weak_type=False] dq
+    ds:f32[1024,512] = pjit[
+      jaxpr={ lambda ; dt:f32[1024,512] du:f32[1024,1] dv:f32[1024,512] dw:f32[1024,512]
+          dx:f32[1024,1] dy:f32[1024,1]. let
+          dz:f32[1024] = reduce_sum[axes=(1,)] dt
+          ea:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] dz
+          eb:f32[1024,1] = div ea 512.0
+          ec:f32[1024,512] = sub dt eb
+          ed:f32[1024,512] = mul ec du
+          ee:f32[1024,512] = mul dt dw
+          ef:f32[1024] = reduce_sum[axes=(1,)] ee
+          eg:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] ef
+          eh:f32[1024,1] = div eg 512.0
+          ei:f32[1024,1] = mul eb dx
+          ej:f32[1024,1] = sub eh ei
+          ek:f32[1024,1] = mul ej dy
+          el:f32[1024,512] = mul dv ek
+          em:f32[1024,512] = add_any ed el
+        in (em,) }
+      name=standardize
+    ] dr bd be bf bg bh
+    en:f32[1024,512] = mul ds a
+    eo:f32[1,512] = broadcast_in_dim[broadcast_dimensions=(1,) shape=(1, 512)] o
+    ep:f32[1024,512] = mul bi eo
+    eq:f32[1024,512] = add_any en ep
+    er:f32[1,512] = broadcast_in_dim[broadcast_dimensions=(1,) shape=(1, 512)] p
+    es:f32[1024,512] = add eq er
+    et:f16[1024,512] = convert_element_type[new_dtype=float16 weak_type=False] es
+    eu:f16[1024,512] = pjit[
+      jaxpr={ lambda ; ev:f16[1024,512] ew:f16[1024,512] ex:f16[1024,512] ey:f16[1024,512]. let
+          ez:f16[1024,512] = mul ev ew
+          fa:f16[1024,512] = pjit[
+            jaxpr={ lambda ; fb:f16[1024,512] fc:f16[1024,512]. let
+                fd:f16[1024,512] = mul fb fc
+              in (fd,) }
+            name=sigmoid
+          ] ev ey
+          fe:f16[1024,512] = mul ex fa
+          ff:f16[1024,512] = add_any ez fe
+        in (ff,) }
+      name=silu
+    ] et bj bk bl
+    fg:f16[1024,512] = dot_general[dimension_numbers=(([1], [0]), ([], []))] eu b
+    fh:f16[512,512] = convert_element_type[new_dtype=float16 weak_type=False] q
+    fi:f16[1024,512] = dot_general[dimension_numbers=(([1], [0]), ([], []))] bm fh
+    fj:f16[1024,512] = add_any fg fi
+    fk:f32[1024,512] = convert_element_type[new_dtype=float32 weak_type=False] fj
+    fl:f32[1024,512] = pjit[
+      jaxpr={ lambda ; dt:f32[1024,512] du:f32[1024,1] dv:f32[1024,512] dw:f32[1024,512]
+          dx:f32[1024,1] dy:f32[1024,1]. let
+          dz:f32[1024] = reduce_sum[axes=(1,)] dt
+          ea:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] dz
+          eb:f32[1024,1] = div ea 512.0
+          ec:f32[1024,512] = sub dt eb
+          ed:f32[1024,512] = mul ec du
+          ee:f32[1024,512] = mul dt dw
+          ef:f32[1024] = reduce_sum[axes=(1,)] ee
+          eg:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] ef
+          eh:f32[1024,1] = div eg 512.0
+          ei:f32[1024,1] = mul eb dx
+          ej:f32[1024,1] = sub eh ei
+          ek:f32[1024,1] = mul ej dy
+          el:f32[1024,512] = mul dv ek
+          em:f32[1024,512] = add_any ed el
+        in (em,) }
+      name=standardize
+    ] fk bn bo bp bq br
+    fm:f32[1024,512] = mul fl c
+    fn:f32[1,512] = broadcast_in_dim[broadcast_dimensions=(1,) shape=(1, 512)] r
+    fo:f32[1024,512] = mul bs fn
+    fp:f32[1024,512] = add_any fm fo
+    fq:f32[1,512] = broadcast_in_dim[broadcast_dimensions=(1,) shape=(1, 512)] s
+    fr:f32[1024,512] = add fp fq
+    fs:f16[1024,512] = convert_element_type[new_dtype=float16 weak_type=False] fr
+    ft:f16[1024,512] = pjit[
+      jaxpr={ lambda ; ev:f16[1024,512] ew:f16[1024,512] ex:f16[1024,512] ey:f16[1024,512]. let
+          ez:f16[1024,512] = mul ev ew
+          fa:f16[1024,512] = pjit[
+            jaxpr={ lambda ; fb:f16[1024,512] fc:f16[1024,512]. let
+                fd:f16[1024,512] = mul fb fc
+              in (fd,) }
+            name=sigmoid
+          ] ev ey
+          fe:f16[1024,512] = mul ex fa
+          ff:f16[1024,512] = add_any ez fe
+        in (ff,) }
+      name=silu
+    ] fs bt bu bv
+    fu:f16[1024,12] = dot_general[dimension_numbers=(([1], [0]), ([], []))] ft d
+    fv:f16[512,12] = convert_element_type[new_dtype=float16 weak_type=False] v
+    fw:f16[1024,12] = dot_general[dimension_numbers=(([1], [0]), ([], []))] bw fv
+    fx:f16[1024,12] = add_any fu fw
+    fy:f16[12] = convert_element_type[new_dtype=float16 weak_type=False] w
+    fz:f16[1,12] = broadcast_in_dim[broadcast_dimensions=(1,) shape=(1, 12)] fy
+    ga:f16[1024,12] = add fx fz
+    gb:f32[1024,12] = convert_element_type[new_dtype=float32 weak_type=False] ga
+    gc:f32[1024,12] = pjit[
+      jaxpr={ lambda ; gd:f32[1024,12] ge:f32[1024,12]. let
+          gf:f32[1024,12] = mul gd ge
+        in (gf,) }
+      name=sigmoid
+    ] gb bx
+    gg:f32[1024,12] = mul 0.8999999761581421 gc
+    gh:f32[1,1024,12] = broadcast_in_dim[
+      broadcast_dimensions=(1, 2)
+      shape=(1, 1024, 12)
+    ] gg
+    gi:f32[1,1024,12] = mul bb gh
+    gj:f16[1024,12] = dot_general[dimension_numbers=(([1], [0]), ([], []))] ft e
+    gk:f16[512,12] = convert_element_type[new_dtype=float16 weak_type=False] t
+    gl:f16[1024,12] = dot_general[dimension_numbers=(([1], [0]), ([], []))] bw gk
+    gm:f16[1024,12] = add_any gj gl
+    gn:f16[12] = convert_element_type[new_dtype=float16 weak_type=False] u
+    go:f16[1,12] = broadcast_in_dim[broadcast_dimensions=(1,) shape=(1, 12)] gn
+    gp:f16[1024,12] = add gm go
+    gq:f32[1024,12] = convert_element_type[new_dtype=float32 weak_type=False] gp
+    gr:f32[1024,12] = mul gq by
+    gs:f32[1024,12] = add gq gr
+    gt:f32[1024,12] = mul gs bz
+    gu:f32[1,1024,12] = broadcast_in_dim[
+      broadcast_dimensions=(1, 2)
+      shape=(1, 1024, 12)
+    ] gt
+    gv:f32[1,1024,12] = add gi gu
+    gw:f32[1024,12] = reshape[dimensions=None new_sizes=(1024, 12)] gv
+    gx:f16[1024,1024] = reshape[dimensions=None new_sizes=(1024, 1024)] ba
+    gy:f16[1024,12] = convert_element_type[new_dtype=float16 weak_type=False] x
+    gz:f16[1024,12] = mul gy ca
+    ha:f16[1024,1036] = concatenate[dimension=1] gx gz
+    hb:f16[1024,512] = dot_general[dimension_numbers=(([1], [0]), ([], []))] ha f
+    hc:f32[1024,512] = convert_element_type[new_dtype=float32 weak_type=False] hb
+    hd:f32[1024,512] = pjit[
+      jaxpr={ lambda ; dt:f32[1024,512] du:f32[1024,1] dv:f32[1024,512] dw:f32[1024,512]
+          dx:f32[1024,1] dy:f32[1024,1]. let
+          dz:f32[1024] = reduce_sum[axes=(1,)] dt
+          ea:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] dz
+          eb:f32[1024,1] = div ea 512.0
+          ec:f32[1024,512] = sub dt eb
+          ed:f32[1024,512] = mul ec du
+          ee:f32[1024,512] = mul dt dw
+          ef:f32[1024] = reduce_sum[axes=(1,)] ee
+          eg:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] ef
+          eh:f32[1024,1] = div eg 512.0
+          ei:f32[1024,1] = mul eb dx
+          ej:f32[1024,1] = sub eh ei
+          ek:f32[1024,1] = mul ej dy
+          el:f32[1024,512] = mul dv ek
+          em:f32[1024,512] = add_any ed el
+        in (em,) }
+      name=standardize
+    ] hc cb cc cd ce cf
+    he:f32[1024,512] = mul hd g
+    hf:f16[1024,512] = convert_element_type[new_dtype=float16 weak_type=False] he
+    hg:f16[1024,512] = pjit[
+      jaxpr={ lambda ; ev:f16[1024,512] ew:f16[1024,512] ex:f16[1024,512] ey:f16[1024,512]. let
+          ez:f16[1024,512] = mul ev ew
+          fa:f16[1024,512] = pjit[
+            jaxpr={ lambda ; fb:f16[1024,512] fc:f16[1024,512]. let
+                fd:f16[1024,512] = mul fb fc
+              in (fd,) }
+            name=sigmoid
+          ] ev ey
+          fe:f16[1024,512] = mul ex fa
+          ff:f16[1024,512] = add_any ez fe
+        in (ff,) }
+      name=silu
+    ] hf cg ch ci
+    hh:f16[1024,1024] = concatenate[dimension=1] y hg
+    hi:f16[1024,1536] = dot_general[dimension_numbers=(([1], [0]), ([], []))] hh
+      h
+    hj:f32[1024,1536] = convert_element_type[new_dtype=float32 weak_type=False] hi
+    hk:f32[1024,1536] = pjit[
+      jaxpr={ lambda ; hl:f32[1024,1536] hm:f32[1024,1] hn:f32[1024,1536] ho:f32[1024,1536]
+          hp:f32[1024,1] hq:f32[1024,1]. let
+          hr:f32[1024] = reduce_sum[axes=(1,)] hl
+          hs:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] hr
+          ht:f32[1024,1] = div hs 1536.0
+          hu:f32[1024,1536] = sub hl ht
+          hv:f32[1024,1536] = mul hu hm
+          hw:f32[1024,1536] = mul hl ho
+          hx:f32[1024] = reduce_sum[axes=(1,)] hw
+          hy:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] hx
+          hz:f32[1024,1] = div hy 1536.0
+          ia:f32[1024,1] = mul ht hp
+          ib:f32[1024,1] = sub hz ia
+          ic:f32[1024,1] = mul ib hq
+          id:f32[1024,1536] = mul hn ic
+          ie:f32[1024,1536] = add_any hv id
+        in (ie,) }
+      name=standardize
+    ] hj cj ck cl cm cn
+    if:f32[1024,1536] = mul hk i
+    ig:f16[1024,1536] = convert_element_type[new_dtype=float16 weak_type=False] if
+    ih:f16[1024,512] = slice[
+      limit_indices=(1024, 1536)
+      start_indices=(0, 1024)
+      strides=None
+    ] ig
+    ii:f16[1024,512] = pjit[
+      jaxpr={ lambda ; fb:f16[1024,512] fc:f16[1024,512]. let
+          fd:f16[1024,512] = mul fb fc
+        in (fd,) }
+      name=sigmoid
+    ] ih co
+    ij:f16[1024,512] = mul ii cp
+    ik:f16[1024,512] = slice[
+      limit_indices=(1024, 512)
+      start_indices=(0, 0)
+      strides=None
+    ] ig
+    il:f16[1024,512] = pjit[
+      jaxpr={ lambda ; fb:f16[1024,512] fc:f16[1024,512]. let
+          fd:f16[1024,512] = mul fb fc
+        in (fd,) }
+      name=sigmoid
+    ] ik cr
+    im:f16[1024,512] = mul il cs
+    in:f16[1024,512] = slice[
+      limit_indices=(1024, 1024)
+      start_indices=(0, 512)
+      strides=None
+    ] ig
+    io:f16[1024,512] = mul ct in
+    ip:f16[1024,512] = add_any im io
+    iq:f16[1024,512] = mul ip cp
+    ir:f16[1024,512] = add ip iq
+    is:f16[1024,512] = mul ir cu
+    it:f16[1024,512] = mul cq is
+    iu:f16[1024,512] = add_any ij it
+    iv:f16[1024,512] = neg ii
+    iw:f16[1024,512] = mul iv cv
+    ix:f16[1024,512] = mul cw y
+    iy:f16[1024,512] = add_any iw ix
+    iz:f16[1024,512] = add iu iy
+    ja:f16[1024,512] = dot_general[dimension_numbers=(([1], [0]), ([], []))] iz j
+    jb:f32[1024,512] = convert_element_type[new_dtype=float32 weak_type=False] ja
+    jc:f32[1024,512] = pjit[
+      jaxpr={ lambda ; dt:f32[1024,512] du:f32[1024,1] dv:f32[1024,512] dw:f32[1024,512]
+          dx:f32[1024,1] dy:f32[1024,1]. let
+          dz:f32[1024] = reduce_sum[axes=(1,)] dt
+          ea:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] dz
+          eb:f32[1024,1] = div ea 512.0
+          ec:f32[1024,512] = sub dt eb
+          ed:f32[1024,512] = mul ec du
+          ee:f32[1024,512] = mul dt dw
+          ef:f32[1024] = reduce_sum[axes=(1,)] ee
+          eg:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] ef
+          eh:f32[1024,1] = div eg 512.0
+          ei:f32[1024,1] = mul eb dx
+          ej:f32[1024,1] = sub eh ei
+          ek:f32[1024,1] = mul ej dy
+          el:f32[1024,512] = mul dv ek
+          em:f32[1024,512] = add_any ed el
+        in (em,) }
+      name=standardize
+    ] jb cx cy cz da db
+    jd:f32[1024,512] = mul jc k
+    je:f16[1024,512] = convert_element_type[new_dtype=float16 weak_type=False] jd
+    jf:f16[1024,512] = pjit[
+      jaxpr={ lambda ; ev:f16[1024,512] ew:f16[1024,512] ex:f16[1024,512] ey:f16[1024,512]. let
+          ez:f16[1024,512] = mul ev ew
+          fa:f16[1024,512] = pjit[
+            jaxpr={ lambda ; fb:f16[1024,512] fc:f16[1024,512]. let
+                fd:f16[1024,512] = mul fb fc
+              in (fd,) }
+            name=sigmoid
+          ] ev ey
+          fe:f16[1024,512] = mul ex fa
+          ff:f16[1024,512] = add_any ez fe
+        in (ff,) }
+      name=silu
+    ] je dc dd de
+    jg:f16[1024,1024] = dot_general[dimension_numbers=(([1], [0]), ([], []))] jf
+      l
+    jh:f16[1024,32,32] = reshape[dimensions=None new_sizes=(1024, 32, 32)] jg
+    ji:f16[1024,32,32] = mul jh df
+    jj:f16[1024,32,32] = div ji dg
+    jk:f32[1024,32,32] = convert_element_type[new_dtype=float32 weak_type=False] ji
+    jl:f32[1024,32] = reduce_sum[axes=(2,)] jk
+    jm:f32[1024,32,1] = broadcast_in_dim[
+      broadcast_dimensions=(0, 1)
+      shape=(1024, 32, 1)
+    ] jl
+    jn:f16[1024,32,1] = convert_element_type[new_dtype=float16 weak_type=False] jm
+    jo:f16[1024,32,1] = neg jn
+    jp:f16[1024,32,32] = mul jo df
+    jq:f16[1024,32,32] = mul jp dh
+    jr:f16[1024,32,32] = add_any jj jq
+    js:f16[1024,32,32] = mul 0.990234375 jr
+    jt:f16[1024,32,32] = div js di
+    ju:f32[1024,32,32] = convert_element_type[new_dtype=float32 weak_type=False] jt
+    jv:f32[1024,32,32] = mul ju dj
+    jw:f32[1024,32] = reduce_sum[axes=(2,)] jv
+    jx:f32[1024,32] = div jw dk
+    jy:f32[1024,32,1] = broadcast_in_dim[
+      broadcast_dimensions=(0, 1)
+      shape=(1024, 32, 1)
+    ] jx
+    jz:f32[1024,32,1] = pjit[
+      jaxpr={ lambda ; ka:f32[1024,32,1] kb:bool[1024,32,1] kc:f32[1024,32,1]. let
+          kd:f32[1024,32,1] = select_n kb ka kc
+        in (kd,) }
+      name=_where
+    ] jy dl m
+    ke:f32[1024,32,32] = sub ju jz
+    kf:f32[1024,32,32] = mul ke dm
+    kg:f32[1024,32,32] = div kf dn
+    kh:f32[1024,32] = reduce_sum[axes=(2,)] kf
+    ki:f32[1024,32,1] = broadcast_in_dim[
+      broadcast_dimensions=(0, 1)
+      shape=(1024, 32, 1)
+    ] kh
+    kj:f32[1024,32,1] = neg ki
+    kk:f32[1024,32,32] = mul kj dm
+    kl:f32[1024,32,32] = mul kk do
+    km:f32[1024,32,32] = add_any kg kl
+    kn:f32[1,1024,32,32] = broadcast_in_dim[
+      broadcast_dimensions=(1, 2, 3)
+      shape=(1, 1024, 32, 32)
+    ] km
+    ko:f32[1024,32,32] = reshape[dimensions=None new_sizes=(1024, 32, 32)] kn
+    kp:f16[1024,32,32] = convert_element_type[new_dtype=float16 weak_type=False] ko
+  in (gw, iz, jt, kp, gw, iz, jt, kp) }, 'linear': (False, False, False, False, False, False, False, False, False, False, False, False, False, True, True, True, True, True, True, True, True, True, True, True, True, True, True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False), 'num_consts': 23, 'num_carry': 4}, effects=set(), source_info=SourceInfo(traceback=<jaxlib.xla_extension.Traceback object at 0x7fce401c1d70>, name_stack=NameStack(stack=(Transform(name='jvp'), Scope(name='wm'), Scope(name='scan'))))), 'deter': Traced<ShapedArray(float16[15,1024,512])>with<JVPTrace(level=3/0)> with
+  primal = Traced<ShapedArray(float16[15,1024,512])>with<DynamicJaxprTrace(level=1/0)>
+  tangent = Traced<ShapedArray(float16[15,1024,512])>with<JaxprTrace(level=2/0)> with
+    pval = (ShapedArray(float16[15,1024,512]), None)
+    recipe = JaxprEqnRecipe(eqn_id=<object object at 0x7fce4043af30>, in_tracers=(Traced<ShapedArray(float32[1,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[512,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[512,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[512,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[1036,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[1024,1536]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1,1536]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[512,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[512,1024]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1024,32,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1536,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1024,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[1024,32,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[1024,32,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1,1024,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,1536]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1536]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1536]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,32,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,32,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,32,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,32,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,32,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(bool[15,1024,32,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,32,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,32,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,32,1]):JaxprTrace(level=2/0)>), out_tracer_refs=[<weakref at 0x7fce4017ff90; dead>, <weakref at 0x7fce4017fd60; dead>, <weakref at 0x7fce4017fef0; dead>, <weakref at 0x7fce4017fe50; dead>, <weakref at 0x7fce4017fea0; to 'JaxprTracer' at 0x7fce4017f9f0>, <weakref at 0x7fce40185950; to 'JaxprTracer' at 0x7fce4017fae0>, <weakref at 0x7fce401859a0; to 'JaxprTracer' at 0x7fce4017f770>, <weakref at 0x7fce40185860; to 'JaxprTracer' at 0x7fce4017f5e0>], out_avals=[ShapedArray(float32[1024,12]), ShapedArray(float16[1024,512]), ShapedArray(float16[1024,32,32]), ShapedArray(float16[1024,32,32]), ShapedArray(float32[15,1024,12]), ShapedArray(float16[15,1024,512]), ShapedArray(float16[15,1024,32,32]), ShapedArray(float16[15,1024,32,32])], primitive=scan, params={'reverse': False, 'length': 15, 'unroll': 1, 'jaxpr': { lambda ; a:f32[1,512] b:f16[512,512] c:f32[1,512] d:f16[512,12] e:f16[512,12] f:f16[1036,512]
+    g:f32[1,512] h:f16[1024,1536] i:f32[1,1536] j:f16[512,512] k:f32[1,512] l:f16[512,1024]
+    m:f32[1024,32,1] n:f32[1536,512] o:f32[512] p:f32[512] q:f32[512,512] r:f32[512]
+    s:f32[512] t:f32[512,12] u:f32[12] v:f32[512,12] w:f32[12] x:f32[1024,12] y:f16[1024,512]
+    z:f16[1024,32,32] ba:f16[1024,32,32] bb:f32[1,1024,12] bc:f16[1024,1536] bd:f32[1024,1]
+    be:f32[1024,512] bf:f32[1024,512] bg:f32[1024,1] bh:f32[1024,1] bi:f32[1024,512]
+    bj:f16[1024,512] bk:f16[1024,512] bl:f16[1024,512] bm:f16[1024,512] bn:f32[1024,1]
+    bo:f32[1024,512] bp:f32[1024,512] bq:f32[1024,1] br:f32[1024,1] bs:f32[1024,512]
+    bt:f16[1024,512] bu:f16[1024,512] bv:f16[1024,512] bw:f16[1024,512] bx:f32[1024,12]
+    by:f32[1024,12] bz:f32[1024,12] ca:f16[1024,12] cb:f32[1024,1] cc:f32[1024,512]
+    cd:f32[1024,512] ce:f32[1024,1] cf:f32[1024,1] cg:f16[1024,512] ch:f16[1024,512]
+    ci:f16[1024,512] cj:f32[1024,1] ck:f32[1024,1536] cl:f32[1024,1536] cm:f32[1024,1]
+    cn:f32[1024,1] co:f16[1024,512] cp:f16[1024,512] cq:f16[1024,512] cr:f16[1024,512]
+    cs:f16[1024,512] ct:f16[1024,512] cu:f16[1024,512] cv:f16[1024,512] cw:f16[1024,512]
+    cx:f32[1024,1] cy:f32[1024,512] cz:f32[1024,512] da:f32[1024,1] db:f32[1024,1]
+    dc:f16[1024,512] dd:f16[1024,512] de:f16[1024,512] df:f16[1024,32,32] dg:f16[1024,32,1]
+    dh:f16[1024,32,1] di:f16[1024,32,32] dj:f32[1024,32,32] dk:f32[1024,32] dl:bool[1024,32,1]
+    dm:f32[1024,32,32] dn:f32[1024,32,1] do:f32[1024,32,1]. let
+    dp:f16[1536,512] = convert_element_type[new_dtype=float16 weak_type=False] n
+    dq:f16[1024,512] = dot_general[dimension_numbers=(([1], [0]), ([], []))] bc dp
+    dr:f32[1024,512] = convert_element_type[new_dtype=float32 weak_type=False] dq
+    ds:f32[1024,512] = pjit[
+      jaxpr={ lambda ; dt:f32[1024,512] du:f32[1024,1] dv:f32[1024,512] dw:f32[1024,512]
+          dx:f32[1024,1] dy:f32[1024,1]. let
+          dz:f32[1024] = reduce_sum[axes=(1,)] dt
+          ea:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] dz
+          eb:f32[1024,1] = div ea 512.0
+          ec:f32[1024,512] = sub dt eb
+          ed:f32[1024,512] = mul ec du
+          ee:f32[1024,512] = mul dt dw
+          ef:f32[1024] = reduce_sum[axes=(1,)] ee
+          eg:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] ef
+          eh:f32[1024,1] = div eg 512.0
+          ei:f32[1024,1] = mul eb dx
+          ej:f32[1024,1] = sub eh ei
+          ek:f32[1024,1] = mul ej dy
+          el:f32[1024,512] = mul dv ek
+          em:f32[1024,512] = add_any ed el
+        in (em,) }
+      name=standardize
+    ] dr bd be bf bg bh
+    en:f32[1024,512] = mul ds a
+    eo:f32[1,512] = broadcast_in_dim[broadcast_dimensions=(1,) shape=(1, 512)] o
+    ep:f32[1024,512] = mul bi eo
+    eq:f32[1024,512] = add_any en ep
+    er:f32[1,512] = broadcast_in_dim[broadcast_dimensions=(1,) shape=(1, 512)] p
+    es:f32[1024,512] = add eq er
+    et:f16[1024,512] = convert_element_type[new_dtype=float16 weak_type=False] es
+    eu:f16[1024,512] = pjit[
+      jaxpr={ lambda ; ev:f16[1024,512] ew:f16[1024,512] ex:f16[1024,512] ey:f16[1024,512]. let
+          ez:f16[1024,512] = mul ev ew
+          fa:f16[1024,512] = pjit[
+            jaxpr={ lambda ; fb:f16[1024,512] fc:f16[1024,512]. let
+                fd:f16[1024,512] = mul fb fc
+              in (fd,) }
+            name=sigmoid
+          ] ev ey
+          fe:f16[1024,512] = mul ex fa
+          ff:f16[1024,512] = add_any ez fe
+        in (ff,) }
+      name=silu
+    ] et bj bk bl
+    fg:f16[1024,512] = dot_general[dimension_numbers=(([1], [0]), ([], []))] eu b
+    fh:f16[512,512] = convert_element_type[new_dtype=float16 weak_type=False] q
+    fi:f16[1024,512] = dot_general[dimension_numbers=(([1], [0]), ([], []))] bm fh
+    fj:f16[1024,512] = add_any fg fi
+    fk:f32[1024,512] = convert_element_type[new_dtype=float32 weak_type=False] fj
+    fl:f32[1024,512] = pjit[
+      jaxpr={ lambda ; dt:f32[1024,512] du:f32[1024,1] dv:f32[1024,512] dw:f32[1024,512]
+          dx:f32[1024,1] dy:f32[1024,1]. let
+          dz:f32[1024] = reduce_sum[axes=(1,)] dt
+          ea:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] dz
+          eb:f32[1024,1] = div ea 512.0
+          ec:f32[1024,512] = sub dt eb
+          ed:f32[1024,512] = mul ec du
+          ee:f32[1024,512] = mul dt dw
+          ef:f32[1024] = reduce_sum[axes=(1,)] ee
+          eg:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] ef
+          eh:f32[1024,1] = div eg 512.0
+          ei:f32[1024,1] = mul eb dx
+          ej:f32[1024,1] = sub eh ei
+          ek:f32[1024,1] = mul ej dy
+          el:f32[1024,512] = mul dv ek
+          em:f32[1024,512] = add_any ed el
+        in (em,) }
+      name=standardize
+    ] fk bn bo bp bq br
+    fm:f32[1024,512] = mul fl c
+    fn:f32[1,512] = broadcast_in_dim[broadcast_dimensions=(1,) shape=(1, 512)] r
+    fo:f32[1024,512] = mul bs fn
+    fp:f32[1024,512] = add_any fm fo
+    fq:f32[1,512] = broadcast_in_dim[broadcast_dimensions=(1,) shape=(1, 512)] s
+    fr:f32[1024,512] = add fp fq
+    fs:f16[1024,512] = convert_element_type[new_dtype=float16 weak_type=False] fr
+    ft:f16[1024,512] = pjit[
+      jaxpr={ lambda ; ev:f16[1024,512] ew:f16[1024,512] ex:f16[1024,512] ey:f16[1024,512]. let
+          ez:f16[1024,512] = mul ev ew
+          fa:f16[1024,512] = pjit[
+            jaxpr={ lambda ; fb:f16[1024,512] fc:f16[1024,512]. let
+                fd:f16[1024,512] = mul fb fc
+              in (fd,) }
+            name=sigmoid
+          ] ev ey
+          fe:f16[1024,512] = mul ex fa
+          ff:f16[1024,512] = add_any ez fe
+        in (ff,) }
+      name=silu
+    ] fs bt bu bv
+    fu:f16[1024,12] = dot_general[dimension_numbers=(([1], [0]), ([], []))] ft d
+    fv:f16[512,12] = convert_element_type[new_dtype=float16 weak_type=False] v
+    fw:f16[1024,12] = dot_general[dimension_numbers=(([1], [0]), ([], []))] bw fv
+    fx:f16[1024,12] = add_any fu fw
+    fy:f16[12] = convert_element_type[new_dtype=float16 weak_type=False] w
+    fz:f16[1,12] = broadcast_in_dim[broadcast_dimensions=(1,) shape=(1, 12)] fy
+    ga:f16[1024,12] = add fx fz
+    gb:f32[1024,12] = convert_element_type[new_dtype=float32 weak_type=False] ga
+    gc:f32[1024,12] = pjit[
+      jaxpr={ lambda ; gd:f32[1024,12] ge:f32[1024,12]. let
+          gf:f32[1024,12] = mul gd ge
+        in (gf,) }
+      name=sigmoid
+    ] gb bx
+    gg:f32[1024,12] = mul 0.8999999761581421 gc
+    gh:f32[1,1024,12] = broadcast_in_dim[
+      broadcast_dimensions=(1, 2)
+      shape=(1, 1024, 12)
+    ] gg
+    gi:f32[1,1024,12] = mul bb gh
+    gj:f16[1024,12] = dot_general[dimension_numbers=(([1], [0]), ([], []))] ft e
+    gk:f16[512,12] = convert_element_type[new_dtype=float16 weak_type=False] t
+    gl:f16[1024,12] = dot_general[dimension_numbers=(([1], [0]), ([], []))] bw gk
+    gm:f16[1024,12] = add_any gj gl
+    gn:f16[12] = convert_element_type[new_dtype=float16 weak_type=False] u
+    go:f16[1,12] = broadcast_in_dim[broadcast_dimensions=(1,) shape=(1, 12)] gn
+    gp:f16[1024,12] = add gm go
+    gq:f32[1024,12] = convert_element_type[new_dtype=float32 weak_type=False] gp
+    gr:f32[1024,12] = mul gq by
+    gs:f32[1024,12] = add gq gr
+    gt:f32[1024,12] = mul gs bz
+    gu:f32[1,1024,12] = broadcast_in_dim[
+      broadcast_dimensions=(1, 2)
+      shape=(1, 1024, 12)
+    ] gt
+    gv:f32[1,1024,12] = add gi gu
+    gw:f32[1024,12] = reshape[dimensions=None new_sizes=(1024, 12)] gv
+    gx:f16[1024,1024] = reshape[dimensions=None new_sizes=(1024, 1024)] ba
+    gy:f16[1024,12] = convert_element_type[new_dtype=float16 weak_type=False] x
+    gz:f16[1024,12] = mul gy ca
+    ha:f16[1024,1036] = concatenate[dimension=1] gx gz
+    hb:f16[1024,512] = dot_general[dimension_numbers=(([1], [0]), ([], []))] ha f
+    hc:f32[1024,512] = convert_element_type[new_dtype=float32 weak_type=False] hb
+    hd:f32[1024,512] = pjit[
+      jaxpr={ lambda ; dt:f32[1024,512] du:f32[1024,1] dv:f32[1024,512] dw:f32[1024,512]
+          dx:f32[1024,1] dy:f32[1024,1]. let
+          dz:f32[1024] = reduce_sum[axes=(1,)] dt
+          ea:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] dz
+          eb:f32[1024,1] = div ea 512.0
+          ec:f32[1024,512] = sub dt eb
+          ed:f32[1024,512] = mul ec du
+          ee:f32[1024,512] = mul dt dw
+          ef:f32[1024] = reduce_sum[axes=(1,)] ee
+          eg:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] ef
+          eh:f32[1024,1] = div eg 512.0
+          ei:f32[1024,1] = mul eb dx
+          ej:f32[1024,1] = sub eh ei
+          ek:f32[1024,1] = mul ej dy
+          el:f32[1024,512] = mul dv ek
+          em:f32[1024,512] = add_any ed el
+        in (em,) }
+      name=standardize
+    ] hc cb cc cd ce cf
+    he:f32[1024,512] = mul hd g
+    hf:f16[1024,512] = convert_element_type[new_dtype=float16 weak_type=False] he
+    hg:f16[1024,512] = pjit[
+      jaxpr={ lambda ; ev:f16[1024,512] ew:f16[1024,512] ex:f16[1024,512] ey:f16[1024,512]. let
+          ez:f16[1024,512] = mul ev ew
+          fa:f16[1024,512] = pjit[
+            jaxpr={ lambda ; fb:f16[1024,512] fc:f16[1024,512]. let
+                fd:f16[1024,512] = mul fb fc
+              in (fd,) }
+            name=sigmoid
+          ] ev ey
+          fe:f16[1024,512] = mul ex fa
+          ff:f16[1024,512] = add_any ez fe
+        in (ff,) }
+      name=silu
+    ] hf cg ch ci
+    hh:f16[1024,1024] = concatenate[dimension=1] y hg
+    hi:f16[1024,1536] = dot_general[dimension_numbers=(([1], [0]), ([], []))] hh
+      h
+    hj:f32[1024,1536] = convert_element_type[new_dtype=float32 weak_type=False] hi
+    hk:f32[1024,1536] = pjit[
+      jaxpr={ lambda ; hl:f32[1024,1536] hm:f32[1024,1] hn:f32[1024,1536] ho:f32[1024,1536]
+          hp:f32[1024,1] hq:f32[1024,1]. let
+          hr:f32[1024] = reduce_sum[axes=(1,)] hl
+          hs:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] hr
+          ht:f32[1024,1] = div hs 1536.0
+          hu:f32[1024,1536] = sub hl ht
+          hv:f32[1024,1536] = mul hu hm
+          hw:f32[1024,1536] = mul hl ho
+          hx:f32[1024] = reduce_sum[axes=(1,)] hw
+          hy:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] hx
+          hz:f32[1024,1] = div hy 1536.0
+          ia:f32[1024,1] = mul ht hp
+          ib:f32[1024,1] = sub hz ia
+          ic:f32[1024,1] = mul ib hq
+          id:f32[1024,1536] = mul hn ic
+          ie:f32[1024,1536] = add_any hv id
+        in (ie,) }
+      name=standardize
+    ] hj cj ck cl cm cn
+    if:f32[1024,1536] = mul hk i
+    ig:f16[1024,1536] = convert_element_type[new_dtype=float16 weak_type=False] if
+    ih:f16[1024,512] = slice[
+      limit_indices=(1024, 1536)
+      start_indices=(0, 1024)
+      strides=None
+    ] ig
+    ii:f16[1024,512] = pjit[
+      jaxpr={ lambda ; fb:f16[1024,512] fc:f16[1024,512]. let
+          fd:f16[1024,512] = mul fb fc
+        in (fd,) }
+      name=sigmoid
+    ] ih co
+    ij:f16[1024,512] = mul ii cp
+    ik:f16[1024,512] = slice[
+      limit_indices=(1024, 512)
+      start_indices=(0, 0)
+      strides=None
+    ] ig
+    il:f16[1024,512] = pjit[
+      jaxpr={ lambda ; fb:f16[1024,512] fc:f16[1024,512]. let
+          fd:f16[1024,512] = mul fb fc
+        in (fd,) }
+      name=sigmoid
+    ] ik cr
+    im:f16[1024,512] = mul il cs
+    in:f16[1024,512] = slice[
+      limit_indices=(1024, 1024)
+      start_indices=(0, 512)
+      strides=None
+    ] ig
+    io:f16[1024,512] = mul ct in
+    ip:f16[1024,512] = add_any im io
+    iq:f16[1024,512] = mul ip cp
+    ir:f16[1024,512] = add ip iq
+    is:f16[1024,512] = mul ir cu
+    it:f16[1024,512] = mul cq is
+    iu:f16[1024,512] = add_any ij it
+    iv:f16[1024,512] = neg ii
+    iw:f16[1024,512] = mul iv cv
+    ix:f16[1024,512] = mul cw y
+    iy:f16[1024,512] = add_any iw ix
+    iz:f16[1024,512] = add iu iy
+    ja:f16[1024,512] = dot_general[dimension_numbers=(([1], [0]), ([], []))] iz j
+    jb:f32[1024,512] = convert_element_type[new_dtype=float32 weak_type=False] ja
+    jc:f32[1024,512] = pjit[
+      jaxpr={ lambda ; dt:f32[1024,512] du:f32[1024,1] dv:f32[1024,512] dw:f32[1024,512]
+          dx:f32[1024,1] dy:f32[1024,1]. let
+          dz:f32[1024] = reduce_sum[axes=(1,)] dt
+          ea:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] dz
+          eb:f32[1024,1] = div ea 512.0
+          ec:f32[1024,512] = sub dt eb
+          ed:f32[1024,512] = mul ec du
+          ee:f32[1024,512] = mul dt dw
+          ef:f32[1024] = reduce_sum[axes=(1,)] ee
+          eg:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] ef
+          eh:f32[1024,1] = div eg 512.0
+          ei:f32[1024,1] = mul eb dx
+          ej:f32[1024,1] = sub eh ei
+          ek:f32[1024,1] = mul ej dy
+          el:f32[1024,512] = mul dv ek
+          em:f32[1024,512] = add_any ed el
+        in (em,) }
+      name=standardize
+    ] jb cx cy cz da db
+    jd:f32[1024,512] = mul jc k
+    je:f16[1024,512] = convert_element_type[new_dtype=float16 weak_type=False] jd
+    jf:f16[1024,512] = pjit[
+      jaxpr={ lambda ; ev:f16[1024,512] ew:f16[1024,512] ex:f16[1024,512] ey:f16[1024,512]. let
+          ez:f16[1024,512] = mul ev ew
+          fa:f16[1024,512] = pjit[
+            jaxpr={ lambda ; fb:f16[1024,512] fc:f16[1024,512]. let
+                fd:f16[1024,512] = mul fb fc
+              in (fd,) }
+            name=sigmoid
+          ] ev ey
+          fe:f16[1024,512] = mul ex fa
+          ff:f16[1024,512] = add_any ez fe
+        in (ff,) }
+      name=silu
+    ] je dc dd de
+    jg:f16[1024,1024] = dot_general[dimension_numbers=(([1], [0]), ([], []))] jf
+      l
+    jh:f16[1024,32,32] = reshape[dimensions=None new_sizes=(1024, 32, 32)] jg
+    ji:f16[1024,32,32] = mul jh df
+    jj:f16[1024,32,32] = div ji dg
+    jk:f32[1024,32,32] = convert_element_type[new_dtype=float32 weak_type=False] ji
+    jl:f32[1024,32] = reduce_sum[axes=(2,)] jk
+    jm:f32[1024,32,1] = broadcast_in_dim[
+      broadcast_dimensions=(0, 1)
+      shape=(1024, 32, 1)
+    ] jl
+    jn:f16[1024,32,1] = convert_element_type[new_dtype=float16 weak_type=False] jm
+    jo:f16[1024,32,1] = neg jn
+    jp:f16[1024,32,32] = mul jo df
+    jq:f16[1024,32,32] = mul jp dh
+    jr:f16[1024,32,32] = add_any jj jq
+    js:f16[1024,32,32] = mul 0.990234375 jr
+    jt:f16[1024,32,32] = div js di
+    ju:f32[1024,32,32] = convert_element_type[new_dtype=float32 weak_type=False] jt
+    jv:f32[1024,32,32] = mul ju dj
+    jw:f32[1024,32] = reduce_sum[axes=(2,)] jv
+    jx:f32[1024,32] = div jw dk
+    jy:f32[1024,32,1] = broadcast_in_dim[
+      broadcast_dimensions=(0, 1)
+      shape=(1024, 32, 1)
+    ] jx
+    jz:f32[1024,32,1] = pjit[
+      jaxpr={ lambda ; ka:f32[1024,32,1] kb:bool[1024,32,1] kc:f32[1024,32,1]. let
+          kd:f32[1024,32,1] = select_n kb ka kc
+        in (kd,) }
+      name=_where
+    ] jy dl m
+    ke:f32[1024,32,32] = sub ju jz
+    kf:f32[1024,32,32] = mul ke dm
+    kg:f32[1024,32,32] = div kf dn
+    kh:f32[1024,32] = reduce_sum[axes=(2,)] kf
+    ki:f32[1024,32,1] = broadcast_in_dim[
+      broadcast_dimensions=(0, 1)
+      shape=(1024, 32, 1)
+    ] kh
+    kj:f32[1024,32,1] = neg ki
+    kk:f32[1024,32,32] = mul kj dm
+    kl:f32[1024,32,32] = mul kk do
+    km:f32[1024,32,32] = add_any kg kl
+    kn:f32[1,1024,32,32] = broadcast_in_dim[
+      broadcast_dimensions=(1, 2, 3)
+      shape=(1, 1024, 32, 32)
+    ] km
+    ko:f32[1024,32,32] = reshape[dimensions=None new_sizes=(1024, 32, 32)] kn
+    kp:f16[1024,32,32] = convert_element_type[new_dtype=float16 weak_type=False] ko
+  in (gw, iz, jt, kp, gw, iz, jt, kp) }, 'linear': (False, False, False, False, False, False, False, False, False, False, False, False, False, True, True, True, True, True, True, True, True, True, True, True, True, True, True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False), 'num_consts': 23, 'num_carry': 4}, effects=set(), source_info=SourceInfo(traceback=<jaxlib.xla_extension.Traceback object at 0x7fce401c1d70>, name_stack=NameStack(stack=(Transform(name='jvp'), Scope(name='wm'), Scope(name='scan'))))), 'logit': Traced<ShapedArray(float16[15,1024,32,32])>with<JVPTrace(level=3/0)> with
+  primal = Traced<ShapedArray(float16[15,1024,32,32])>with<DynamicJaxprTrace(level=1/0)>
+  tangent = Traced<ShapedArray(float16[15,1024,32,32])>with<JaxprTrace(level=2/0)> with
+    pval = (ShapedArray(float16[15,1024,32,32]), None)
+    recipe = JaxprEqnRecipe(eqn_id=<object object at 0x7fce4043af30>, in_tracers=(Traced<ShapedArray(float32[1,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[512,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[512,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[512,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[1036,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[1024,1536]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1,1536]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[512,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[512,1024]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1024,32,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1536,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1024,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[1024,32,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[1024,32,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1,1024,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,1536]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1536]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1536]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,32,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,32,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,32,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,32,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,32,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(bool[15,1024,32,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,32,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,32,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,32,1]):JaxprTrace(level=2/0)>), out_tracer_refs=[<weakref at 0x7fce4017ff90; dead>, <weakref at 0x7fce4017fd60; dead>, <weakref at 0x7fce4017fef0; dead>, <weakref at 0x7fce4017fe50; dead>, <weakref at 0x7fce4017fea0; to 'JaxprTracer' at 0x7fce4017f9f0>, <weakref at 0x7fce40185950; to 'JaxprTracer' at 0x7fce4017fae0>, <weakref at 0x7fce401859a0; to 'JaxprTracer' at 0x7fce4017f770>, <weakref at 0x7fce40185860; to 'JaxprTracer' at 0x7fce4017f5e0>], out_avals=[ShapedArray(float32[1024,12]), ShapedArray(float16[1024,512]), ShapedArray(float16[1024,32,32]), ShapedArray(float16[1024,32,32]), ShapedArray(float32[15,1024,12]), ShapedArray(float16[15,1024,512]), ShapedArray(float16[15,1024,32,32]), ShapedArray(float16[15,1024,32,32])], primitive=scan, params={'reverse': False, 'length': 15, 'unroll': 1, 'jaxpr': { lambda ; a:f32[1,512] b:f16[512,512] c:f32[1,512] d:f16[512,12] e:f16[512,12] f:f16[1036,512]
+    g:f32[1,512] h:f16[1024,1536] i:f32[1,1536] j:f16[512,512] k:f32[1,512] l:f16[512,1024]
+    m:f32[1024,32,1] n:f32[1536,512] o:f32[512] p:f32[512] q:f32[512,512] r:f32[512]
+    s:f32[512] t:f32[512,12] u:f32[12] v:f32[512,12] w:f32[12] x:f32[1024,12] y:f16[1024,512]
+    z:f16[1024,32,32] ba:f16[1024,32,32] bb:f32[1,1024,12] bc:f16[1024,1536] bd:f32[1024,1]
+    be:f32[1024,512] bf:f32[1024,512] bg:f32[1024,1] bh:f32[1024,1] bi:f32[1024,512]
+    bj:f16[1024,512] bk:f16[1024,512] bl:f16[1024,512] bm:f16[1024,512] bn:f32[1024,1]
+    bo:f32[1024,512] bp:f32[1024,512] bq:f32[1024,1] br:f32[1024,1] bs:f32[1024,512]
+    bt:f16[1024,512] bu:f16[1024,512] bv:f16[1024,512] bw:f16[1024,512] bx:f32[1024,12]
+    by:f32[1024,12] bz:f32[1024,12] ca:f16[1024,12] cb:f32[1024,1] cc:f32[1024,512]
+    cd:f32[1024,512] ce:f32[1024,1] cf:f32[1024,1] cg:f16[1024,512] ch:f16[1024,512]
+    ci:f16[1024,512] cj:f32[1024,1] ck:f32[1024,1536] cl:f32[1024,1536] cm:f32[1024,1]
+    cn:f32[1024,1] co:f16[1024,512] cp:f16[1024,512] cq:f16[1024,512] cr:f16[1024,512]
+    cs:f16[1024,512] ct:f16[1024,512] cu:f16[1024,512] cv:f16[1024,512] cw:f16[1024,512]
+    cx:f32[1024,1] cy:f32[1024,512] cz:f32[1024,512] da:f32[1024,1] db:f32[1024,1]
+    dc:f16[1024,512] dd:f16[1024,512] de:f16[1024,512] df:f16[1024,32,32] dg:f16[1024,32,1]
+    dh:f16[1024,32,1] di:f16[1024,32,32] dj:f32[1024,32,32] dk:f32[1024,32] dl:bool[1024,32,1]
+    dm:f32[1024,32,32] dn:f32[1024,32,1] do:f32[1024,32,1]. let
+    dp:f16[1536,512] = convert_element_type[new_dtype=float16 weak_type=False] n
+    dq:f16[1024,512] = dot_general[dimension_numbers=(([1], [0]), ([], []))] bc dp
+    dr:f32[1024,512] = convert_element_type[new_dtype=float32 weak_type=False] dq
+    ds:f32[1024,512] = pjit[
+      jaxpr={ lambda ; dt:f32[1024,512] du:f32[1024,1] dv:f32[1024,512] dw:f32[1024,512]
+          dx:f32[1024,1] dy:f32[1024,1]. let
+          dz:f32[1024] = reduce_sum[axes=(1,)] dt
+          ea:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] dz
+          eb:f32[1024,1] = div ea 512.0
+          ec:f32[1024,512] = sub dt eb
+          ed:f32[1024,512] = mul ec du
+          ee:f32[1024,512] = mul dt dw
+          ef:f32[1024] = reduce_sum[axes=(1,)] ee
+          eg:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] ef
+          eh:f32[1024,1] = div eg 512.0
+          ei:f32[1024,1] = mul eb dx
+          ej:f32[1024,1] = sub eh ei
+          ek:f32[1024,1] = mul ej dy
+          el:f32[1024,512] = mul dv ek
+          em:f32[1024,512] = add_any ed el
+        in (em,) }
+      name=standardize
+    ] dr bd be bf bg bh
+    en:f32[1024,512] = mul ds a
+    eo:f32[1,512] = broadcast_in_dim[broadcast_dimensions=(1,) shape=(1, 512)] o
+    ep:f32[1024,512] = mul bi eo
+    eq:f32[1024,512] = add_any en ep
+    er:f32[1,512] = broadcast_in_dim[broadcast_dimensions=(1,) shape=(1, 512)] p
+    es:f32[1024,512] = add eq er
+    et:f16[1024,512] = convert_element_type[new_dtype=float16 weak_type=False] es
+    eu:f16[1024,512] = pjit[
+      jaxpr={ lambda ; ev:f16[1024,512] ew:f16[1024,512] ex:f16[1024,512] ey:f16[1024,512]. let
+          ez:f16[1024,512] = mul ev ew
+          fa:f16[1024,512] = pjit[
+            jaxpr={ lambda ; fb:f16[1024,512] fc:f16[1024,512]. let
+                fd:f16[1024,512] = mul fb fc
+              in (fd,) }
+            name=sigmoid
+          ] ev ey
+          fe:f16[1024,512] = mul ex fa
+          ff:f16[1024,512] = add_any ez fe
+        in (ff,) }
+      name=silu
+    ] et bj bk bl
+    fg:f16[1024,512] = dot_general[dimension_numbers=(([1], [0]), ([], []))] eu b
+    fh:f16[512,512] = convert_element_type[new_dtype=float16 weak_type=False] q
+    fi:f16[1024,512] = dot_general[dimension_numbers=(([1], [0]), ([], []))] bm fh
+    fj:f16[1024,512] = add_any fg fi
+    fk:f32[1024,512] = convert_element_type[new_dtype=float32 weak_type=False] fj
+    fl:f32[1024,512] = pjit[
+      jaxpr={ lambda ; dt:f32[1024,512] du:f32[1024,1] dv:f32[1024,512] dw:f32[1024,512]
+          dx:f32[1024,1] dy:f32[1024,1]. let
+          dz:f32[1024] = reduce_sum[axes=(1,)] dt
+          ea:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] dz
+          eb:f32[1024,1] = div ea 512.0
+          ec:f32[1024,512] = sub dt eb
+          ed:f32[1024,512] = mul ec du
+          ee:f32[1024,512] = mul dt dw
+          ef:f32[1024] = reduce_sum[axes=(1,)] ee
+          eg:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] ef
+          eh:f32[1024,1] = div eg 512.0
+          ei:f32[1024,1] = mul eb dx
+          ej:f32[1024,1] = sub eh ei
+          ek:f32[1024,1] = mul ej dy
+          el:f32[1024,512] = mul dv ek
+          em:f32[1024,512] = add_any ed el
+        in (em,) }
+      name=standardize
+    ] fk bn bo bp bq br
+    fm:f32[1024,512] = mul fl c
+    fn:f32[1,512] = broadcast_in_dim[broadcast_dimensions=(1,) shape=(1, 512)] r
+    fo:f32[1024,512] = mul bs fn
+    fp:f32[1024,512] = add_any fm fo
+    fq:f32[1,512] = broadcast_in_dim[broadcast_dimensions=(1,) shape=(1, 512)] s
+    fr:f32[1024,512] = add fp fq
+    fs:f16[1024,512] = convert_element_type[new_dtype=float16 weak_type=False] fr
+    ft:f16[1024,512] = pjit[
+      jaxpr={ lambda ; ev:f16[1024,512] ew:f16[1024,512] ex:f16[1024,512] ey:f16[1024,512]. let
+          ez:f16[1024,512] = mul ev ew
+          fa:f16[1024,512] = pjit[
+            jaxpr={ lambda ; fb:f16[1024,512] fc:f16[1024,512]. let
+                fd:f16[1024,512] = mul fb fc
+              in (fd,) }
+            name=sigmoid
+          ] ev ey
+          fe:f16[1024,512] = mul ex fa
+          ff:f16[1024,512] = add_any ez fe
+        in (ff,) }
+      name=silu
+    ] fs bt bu bv
+    fu:f16[1024,12] = dot_general[dimension_numbers=(([1], [0]), ([], []))] ft d
+    fv:f16[512,12] = convert_element_type[new_dtype=float16 weak_type=False] v
+    fw:f16[1024,12] = dot_general[dimension_numbers=(([1], [0]), ([], []))] bw fv
+    fx:f16[1024,12] = add_any fu fw
+    fy:f16[12] = convert_element_type[new_dtype=float16 weak_type=False] w
+    fz:f16[1,12] = broadcast_in_dim[broadcast_dimensions=(1,) shape=(1, 12)] fy
+    ga:f16[1024,12] = add fx fz
+    gb:f32[1024,12] = convert_element_type[new_dtype=float32 weak_type=False] ga
+    gc:f32[1024,12] = pjit[
+      jaxpr={ lambda ; gd:f32[1024,12] ge:f32[1024,12]. let
+          gf:f32[1024,12] = mul gd ge
+        in (gf,) }
+      name=sigmoid
+    ] gb bx
+    gg:f32[1024,12] = mul 0.8999999761581421 gc
+    gh:f32[1,1024,12] = broadcast_in_dim[
+      broadcast_dimensions=(1, 2)
+      shape=(1, 1024, 12)
+    ] gg
+    gi:f32[1,1024,12] = mul bb gh
+    gj:f16[1024,12] = dot_general[dimension_numbers=(([1], [0]), ([], []))] ft e
+    gk:f16[512,12] = convert_element_type[new_dtype=float16 weak_type=False] t
+    gl:f16[1024,12] = dot_general[dimension_numbers=(([1], [0]), ([], []))] bw gk
+    gm:f16[1024,12] = add_any gj gl
+    gn:f16[12] = convert_element_type[new_dtype=float16 weak_type=False] u
+    go:f16[1,12] = broadcast_in_dim[broadcast_dimensions=(1,) shape=(1, 12)] gn
+    gp:f16[1024,12] = add gm go
+    gq:f32[1024,12] = convert_element_type[new_dtype=float32 weak_type=False] gp
+    gr:f32[1024,12] = mul gq by
+    gs:f32[1024,12] = add gq gr
+    gt:f32[1024,12] = mul gs bz
+    gu:f32[1,1024,12] = broadcast_in_dim[
+      broadcast_dimensions=(1, 2)
+      shape=(1, 1024, 12)
+    ] gt
+    gv:f32[1,1024,12] = add gi gu
+    gw:f32[1024,12] = reshape[dimensions=None new_sizes=(1024, 12)] gv
+    gx:f16[1024,1024] = reshape[dimensions=None new_sizes=(1024, 1024)] ba
+    gy:f16[1024,12] = convert_element_type[new_dtype=float16 weak_type=False] x
+    gz:f16[1024,12] = mul gy ca
+    ha:f16[1024,1036] = concatenate[dimension=1] gx gz
+    hb:f16[1024,512] = dot_general[dimension_numbers=(([1], [0]), ([], []))] ha f
+    hc:f32[1024,512] = convert_element_type[new_dtype=float32 weak_type=False] hb
+    hd:f32[1024,512] = pjit[
+      jaxpr={ lambda ; dt:f32[1024,512] du:f32[1024,1] dv:f32[1024,512] dw:f32[1024,512]
+          dx:f32[1024,1] dy:f32[1024,1]. let
+          dz:f32[1024] = reduce_sum[axes=(1,)] dt
+          ea:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] dz
+          eb:f32[1024,1] = div ea 512.0
+          ec:f32[1024,512] = sub dt eb
+          ed:f32[1024,512] = mul ec du
+          ee:f32[1024,512] = mul dt dw
+          ef:f32[1024] = reduce_sum[axes=(1,)] ee
+          eg:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] ef
+          eh:f32[1024,1] = div eg 512.0
+          ei:f32[1024,1] = mul eb dx
+          ej:f32[1024,1] = sub eh ei
+          ek:f32[1024,1] = mul ej dy
+          el:f32[1024,512] = mul dv ek
+          em:f32[1024,512] = add_any ed el
+        in (em,) }
+      name=standardize
+    ] hc cb cc cd ce cf
+    he:f32[1024,512] = mul hd g
+    hf:f16[1024,512] = convert_element_type[new_dtype=float16 weak_type=False] he
+    hg:f16[1024,512] = pjit[
+      jaxpr={ lambda ; ev:f16[1024,512] ew:f16[1024,512] ex:f16[1024,512] ey:f16[1024,512]. let
+          ez:f16[1024,512] = mul ev ew
+          fa:f16[1024,512] = pjit[
+            jaxpr={ lambda ; fb:f16[1024,512] fc:f16[1024,512]. let
+                fd:f16[1024,512] = mul fb fc
+              in (fd,) }
+            name=sigmoid
+          ] ev ey
+          fe:f16[1024,512] = mul ex fa
+          ff:f16[1024,512] = add_any ez fe
+        in (ff,) }
+      name=silu
+    ] hf cg ch ci
+    hh:f16[1024,1024] = concatenate[dimension=1] y hg
+    hi:f16[1024,1536] = dot_general[dimension_numbers=(([1], [0]), ([], []))] hh
+      h
+    hj:f32[1024,1536] = convert_element_type[new_dtype=float32 weak_type=False] hi
+    hk:f32[1024,1536] = pjit[
+      jaxpr={ lambda ; hl:f32[1024,1536] hm:f32[1024,1] hn:f32[1024,1536] ho:f32[1024,1536]
+          hp:f32[1024,1] hq:f32[1024,1]. let
+          hr:f32[1024] = reduce_sum[axes=(1,)] hl
+          hs:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] hr
+          ht:f32[1024,1] = div hs 1536.0
+          hu:f32[1024,1536] = sub hl ht
+          hv:f32[1024,1536] = mul hu hm
+          hw:f32[1024,1536] = mul hl ho
+          hx:f32[1024] = reduce_sum[axes=(1,)] hw
+          hy:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] hx
+          hz:f32[1024,1] = div hy 1536.0
+          ia:f32[1024,1] = mul ht hp
+          ib:f32[1024,1] = sub hz ia
+          ic:f32[1024,1] = mul ib hq
+          id:f32[1024,1536] = mul hn ic
+          ie:f32[1024,1536] = add_any hv id
+        in (ie,) }
+      name=standardize
+    ] hj cj ck cl cm cn
+    if:f32[1024,1536] = mul hk i
+    ig:f16[1024,1536] = convert_element_type[new_dtype=float16 weak_type=False] if
+    ih:f16[1024,512] = slice[
+      limit_indices=(1024, 1536)
+      start_indices=(0, 1024)
+      strides=None
+    ] ig
+    ii:f16[1024,512] = pjit[
+      jaxpr={ lambda ; fb:f16[1024,512] fc:f16[1024,512]. let
+          fd:f16[1024,512] = mul fb fc
+        in (fd,) }
+      name=sigmoid
+    ] ih co
+    ij:f16[1024,512] = mul ii cp
+    ik:f16[1024,512] = slice[
+      limit_indices=(1024, 512)
+      start_indices=(0, 0)
+      strides=None
+    ] ig
+    il:f16[1024,512] = pjit[
+      jaxpr={ lambda ; fb:f16[1024,512] fc:f16[1024,512]. let
+          fd:f16[1024,512] = mul fb fc
+        in (fd,) }
+      name=sigmoid
+    ] ik cr
+    im:f16[1024,512] = mul il cs
+    in:f16[1024,512] = slice[
+      limit_indices=(1024, 1024)
+      start_indices=(0, 512)
+      strides=None
+    ] ig
+    io:f16[1024,512] = mul ct in
+    ip:f16[1024,512] = add_any im io
+    iq:f16[1024,512] = mul ip cp
+    ir:f16[1024,512] = add ip iq
+    is:f16[1024,512] = mul ir cu
+    it:f16[1024,512] = mul cq is
+    iu:f16[1024,512] = add_any ij it
+    iv:f16[1024,512] = neg ii
+    iw:f16[1024,512] = mul iv cv
+    ix:f16[1024,512] = mul cw y
+    iy:f16[1024,512] = add_any iw ix
+    iz:f16[1024,512] = add iu iy
+    ja:f16[1024,512] = dot_general[dimension_numbers=(([1], [0]), ([], []))] iz j
+    jb:f32[1024,512] = convert_element_type[new_dtype=float32 weak_type=False] ja
+    jc:f32[1024,512] = pjit[
+      jaxpr={ lambda ; dt:f32[1024,512] du:f32[1024,1] dv:f32[1024,512] dw:f32[1024,512]
+          dx:f32[1024,1] dy:f32[1024,1]. let
+          dz:f32[1024] = reduce_sum[axes=(1,)] dt
+          ea:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] dz
+          eb:f32[1024,1] = div ea 512.0
+          ec:f32[1024,512] = sub dt eb
+          ed:f32[1024,512] = mul ec du
+          ee:f32[1024,512] = mul dt dw
+          ef:f32[1024] = reduce_sum[axes=(1,)] ee
+          eg:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] ef
+          eh:f32[1024,1] = div eg 512.0
+          ei:f32[1024,1] = mul eb dx
+          ej:f32[1024,1] = sub eh ei
+          ek:f32[1024,1] = mul ej dy
+          el:f32[1024,512] = mul dv ek
+          em:f32[1024,512] = add_any ed el
+        in (em,) }
+      name=standardize
+    ] jb cx cy cz da db
+    jd:f32[1024,512] = mul jc k
+    je:f16[1024,512] = convert_element_type[new_dtype=float16 weak_type=False] jd
+    jf:f16[1024,512] = pjit[
+      jaxpr={ lambda ; ev:f16[1024,512] ew:f16[1024,512] ex:f16[1024,512] ey:f16[1024,512]. let
+          ez:f16[1024,512] = mul ev ew
+          fa:f16[1024,512] = pjit[
+            jaxpr={ lambda ; fb:f16[1024,512] fc:f16[1024,512]. let
+                fd:f16[1024,512] = mul fb fc
+              in (fd,) }
+            name=sigmoid
+          ] ev ey
+          fe:f16[1024,512] = mul ex fa
+          ff:f16[1024,512] = add_any ez fe
+        in (ff,) }
+      name=silu
+    ] je dc dd de
+    jg:f16[1024,1024] = dot_general[dimension_numbers=(([1], [0]), ([], []))] jf
+      l
+    jh:f16[1024,32,32] = reshape[dimensions=None new_sizes=(1024, 32, 32)] jg
+    ji:f16[1024,32,32] = mul jh df
+    jj:f16[1024,32,32] = div ji dg
+    jk:f32[1024,32,32] = convert_element_type[new_dtype=float32 weak_type=False] ji
+    jl:f32[1024,32] = reduce_sum[axes=(2,)] jk
+    jm:f32[1024,32,1] = broadcast_in_dim[
+      broadcast_dimensions=(0, 1)
+      shape=(1024, 32, 1)
+    ] jl
+    jn:f16[1024,32,1] = convert_element_type[new_dtype=float16 weak_type=False] jm
+    jo:f16[1024,32,1] = neg jn
+    jp:f16[1024,32,32] = mul jo df
+    jq:f16[1024,32,32] = mul jp dh
+    jr:f16[1024,32,32] = add_any jj jq
+    js:f16[1024,32,32] = mul 0.990234375 jr
+    jt:f16[1024,32,32] = div js di
+    ju:f32[1024,32,32] = convert_element_type[new_dtype=float32 weak_type=False] jt
+    jv:f32[1024,32,32] = mul ju dj
+    jw:f32[1024,32] = reduce_sum[axes=(2,)] jv
+    jx:f32[1024,32] = div jw dk
+    jy:f32[1024,32,1] = broadcast_in_dim[
+      broadcast_dimensions=(0, 1)
+      shape=(1024, 32, 1)
+    ] jx
+    jz:f32[1024,32,1] = pjit[
+      jaxpr={ lambda ; ka:f32[1024,32,1] kb:bool[1024,32,1] kc:f32[1024,32,1]. let
+          kd:f32[1024,32,1] = select_n kb ka kc
+        in (kd,) }
+      name=_where
+    ] jy dl m
+    ke:f32[1024,32,32] = sub ju jz
+    kf:f32[1024,32,32] = mul ke dm
+    kg:f32[1024,32,32] = div kf dn
+    kh:f32[1024,32] = reduce_sum[axes=(2,)] kf
+    ki:f32[1024,32,1] = broadcast_in_dim[
+      broadcast_dimensions=(0, 1)
+      shape=(1024, 32, 1)
+    ] kh
+    kj:f32[1024,32,1] = neg ki
+    kk:f32[1024,32,32] = mul kj dm
+    kl:f32[1024,32,32] = mul kk do
+    km:f32[1024,32,32] = add_any kg kl
+    kn:f32[1,1024,32,32] = broadcast_in_dim[
+      broadcast_dimensions=(1, 2, 3)
+      shape=(1, 1024, 32, 32)
+    ] km
+    ko:f32[1024,32,32] = reshape[dimensions=None new_sizes=(1024, 32, 32)] kn
+    kp:f16[1024,32,32] = convert_element_type[new_dtype=float16 weak_type=False] ko
+  in (gw, iz, jt, kp, gw, iz, jt, kp) }, 'linear': (False, False, False, False, False, False, False, False, False, False, False, False, False, True, True, True, True, True, True, True, True, True, True, True, True, True, True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False), 'num_consts': 23, 'num_carry': 4}, effects=set(), source_info=SourceInfo(traceback=<jaxlib.xla_extension.Traceback object at 0x7fce401c1d70>, name_stack=NameStack(stack=(Transform(name='jvp'), Scope(name='wm'), Scope(name='scan'))))), 'stoch': Traced<ShapedArray(float16[15,1024,32,32])>with<JVPTrace(level=3/0)> with
+  primal = Traced<ShapedArray(float16[15,1024,32,32])>with<DynamicJaxprTrace(level=1/0)>
+  tangent = Traced<ShapedArray(float16[15,1024,32,32])>with<JaxprTrace(level=2/0)> with
+    pval = (ShapedArray(float16[15,1024,32,32]), None)
+    recipe = JaxprEqnRecipe(eqn_id=<object object at 0x7fce4043af30>, in_tracers=(Traced<ShapedArray(float32[1,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[512,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[512,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[512,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[1036,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[1024,1536]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1,1536]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[512,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[512,1024]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1024,32,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1536,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[512,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[1024,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[1024,32,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[1024,32,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1,1024,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,1536]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,12]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1536]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1536]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,512]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,32,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,32,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,32,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float16[15,1024,32,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,32,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(bool[15,1024,32,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,32,32]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,32,1]):JaxprTrace(level=2/0)>, Traced<ShapedArray(float32[15,1024,32,1]):JaxprTrace(level=2/0)>), out_tracer_refs=[<weakref at 0x7fce4017ff90; dead>, <weakref at 0x7fce4017fd60; dead>, <weakref at 0x7fce4017fef0; dead>, <weakref at 0x7fce4017fe50; dead>, <weakref at 0x7fce4017fea0; to 'JaxprTracer' at 0x7fce4017f9f0>, <weakref at 0x7fce40185950; to 'JaxprTracer' at 0x7fce4017fae0>, <weakref at 0x7fce401859a0; to 'JaxprTracer' at 0x7fce4017f770>, <weakref at 0x7fce40185860; to 'JaxprTracer' at 0x7fce4017f5e0>], out_avals=[ShapedArray(float32[1024,12]), ShapedArray(float16[1024,512]), ShapedArray(float16[1024,32,32]), ShapedArray(float16[1024,32,32]), ShapedArray(float32[15,1024,12]), ShapedArray(float16[15,1024,512]), ShapedArray(float16[15,1024,32,32]), ShapedArray(float16[15,1024,32,32])], primitive=scan, params={'reverse': False, 'length': 15, 'unroll': 1, 'jaxpr': { lambda ; a:f32[1,512] b:f16[512,512] c:f32[1,512] d:f16[512,12] e:f16[512,12] f:f16[1036,512]
+    g:f32[1,512] h:f16[1024,1536] i:f32[1,1536] j:f16[512,512] k:f32[1,512] l:f16[512,1024]
+    m:f32[1024,32,1] n:f32[1536,512] o:f32[512] p:f32[512] q:f32[512,512] r:f32[512]
+    s:f32[512] t:f32[512,12] u:f32[12] v:f32[512,12] w:f32[12] x:f32[1024,12] y:f16[1024,512]
+    z:f16[1024,32,32] ba:f16[1024,32,32] bb:f32[1,1024,12] bc:f16[1024,1536] bd:f32[1024,1]
+    be:f32[1024,512] bf:f32[1024,512] bg:f32[1024,1] bh:f32[1024,1] bi:f32[1024,512]
+    bj:f16[1024,512] bk:f16[1024,512] bl:f16[1024,512] bm:f16[1024,512] bn:f32[1024,1]
+    bo:f32[1024,512] bp:f32[1024,512] bq:f32[1024,1] br:f32[1024,1] bs:f32[1024,512]
+    bt:f16[1024,512] bu:f16[1024,512] bv:f16[1024,512] bw:f16[1024,512] bx:f32[1024,12]
+    by:f32[1024,12] bz:f32[1024,12] ca:f16[1024,12] cb:f32[1024,1] cc:f32[1024,512]
+    cd:f32[1024,512] ce:f32[1024,1] cf:f32[1024,1] cg:f16[1024,512] ch:f16[1024,512]
+    ci:f16[1024,512] cj:f32[1024,1] ck:f32[1024,1536] cl:f32[1024,1536] cm:f32[1024,1]
+    cn:f32[1024,1] co:f16[1024,512] cp:f16[1024,512] cq:f16[1024,512] cr:f16[1024,512]
+    cs:f16[1024,512] ct:f16[1024,512] cu:f16[1024,512] cv:f16[1024,512] cw:f16[1024,512]
+    cx:f32[1024,1] cy:f32[1024,512] cz:f32[1024,512] da:f32[1024,1] db:f32[1024,1]
+    dc:f16[1024,512] dd:f16[1024,512] de:f16[1024,512] df:f16[1024,32,32] dg:f16[1024,32,1]
+    dh:f16[1024,32,1] di:f16[1024,32,32] dj:f32[1024,32,32] dk:f32[1024,32] dl:bool[1024,32,1]
+    dm:f32[1024,32,32] dn:f32[1024,32,1] do:f32[1024,32,1]. let
+    dp:f16[1536,512] = convert_element_type[new_dtype=float16 weak_type=False] n
+    dq:f16[1024,512] = dot_general[dimension_numbers=(([1], [0]), ([], []))] bc dp
+    dr:f32[1024,512] = convert_element_type[new_dtype=float32 weak_type=False] dq
+    ds:f32[1024,512] = pjit[
+      jaxpr={ lambda ; dt:f32[1024,512] du:f32[1024,1] dv:f32[1024,512] dw:f32[1024,512]
+          dx:f32[1024,1] dy:f32[1024,1]. let
+          dz:f32[1024] = reduce_sum[axes=(1,)] dt
+          ea:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] dz
+          eb:f32[1024,1] = div ea 512.0
+          ec:f32[1024,512] = sub dt eb
+          ed:f32[1024,512] = mul ec du
+          ee:f32[1024,512] = mul dt dw
+          ef:f32[1024] = reduce_sum[axes=(1,)] ee
+          eg:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] ef
+          eh:f32[1024,1] = div eg 512.0
+          ei:f32[1024,1] = mul eb dx
+          ej:f32[1024,1] = sub eh ei
+          ek:f32[1024,1] = mul ej dy
+          el:f32[1024,512] = mul dv ek
+          em:f32[1024,512] = add_any ed el
+        in (em,) }
+      name=standardize
+    ] dr bd be bf bg bh
+    en:f32[1024,512] = mul ds a
+    eo:f32[1,512] = broadcast_in_dim[broadcast_dimensions=(1,) shape=(1, 512)] o
+    ep:f32[1024,512] = mul bi eo
+    eq:f32[1024,512] = add_any en ep
+    er:f32[1,512] = broadcast_in_dim[broadcast_dimensions=(1,) shape=(1, 512)] p
+    es:f32[1024,512] = add eq er
+    et:f16[1024,512] = convert_element_type[new_dtype=float16 weak_type=False] es
+    eu:f16[1024,512] = pjit[
+      jaxpr={ lambda ; ev:f16[1024,512] ew:f16[1024,512] ex:f16[1024,512] ey:f16[1024,512]. let
+          ez:f16[1024,512] = mul ev ew
+          fa:f16[1024,512] = pjit[
+            jaxpr={ lambda ; fb:f16[1024,512] fc:f16[1024,512]. let
+                fd:f16[1024,512] = mul fb fc
+              in (fd,) }
+            name=sigmoid
+          ] ev ey
+          fe:f16[1024,512] = mul ex fa
+          ff:f16[1024,512] = add_any ez fe
+        in (ff,) }
+      name=silu
+    ] et bj bk bl
+    fg:f16[1024,512] = dot_general[dimension_numbers=(([1], [0]), ([], []))] eu b
+    fh:f16[512,512] = convert_element_type[new_dtype=float16 weak_type=False] q
+    fi:f16[1024,512] = dot_general[dimension_numbers=(([1], [0]), ([], []))] bm fh
+    fj:f16[1024,512] = add_any fg fi
+    fk:f32[1024,512] = convert_element_type[new_dtype=float32 weak_type=False] fj
+    fl:f32[1024,512] = pjit[
+      jaxpr={ lambda ; dt:f32[1024,512] du:f32[1024,1] dv:f32[1024,512] dw:f32[1024,512]
+          dx:f32[1024,1] dy:f32[1024,1]. let
+          dz:f32[1024] = reduce_sum[axes=(1,)] dt
+          ea:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] dz
+          eb:f32[1024,1] = div ea 512.0
+          ec:f32[1024,512] = sub dt eb
+          ed:f32[1024,512] = mul ec du
+          ee:f32[1024,512] = mul dt dw
+          ef:f32[1024] = reduce_sum[axes=(1,)] ee
+          eg:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] ef
+          eh:f32[1024,1] = div eg 512.0
+          ei:f32[1024,1] = mul eb dx
+          ej:f32[1024,1] = sub eh ei
+          ek:f32[1024,1] = mul ej dy
+          el:f32[1024,512] = mul dv ek
+          em:f32[1024,512] = add_any ed el
+        in (em,) }
+      name=standardize
+    ] fk bn bo bp bq br
+    fm:f32[1024,512] = mul fl c
+    fn:f32[1,512] = broadcast_in_dim[broadcast_dimensions=(1,) shape=(1, 512)] r
+    fo:f32[1024,512] = mul bs fn
+    fp:f32[1024,512] = add_any fm fo
+    fq:f32[1,512] = broadcast_in_dim[broadcast_dimensions=(1,) shape=(1, 512)] s
+    fr:f32[1024,512] = add fp fq
+    fs:f16[1024,512] = convert_element_type[new_dtype=float16 weak_type=False] fr
+    ft:f16[1024,512] = pjit[
+      jaxpr={ lambda ; ev:f16[1024,512] ew:f16[1024,512] ex:f16[1024,512] ey:f16[1024,512]. let
+          ez:f16[1024,512] = mul ev ew
+          fa:f16[1024,512] = pjit[
+            jaxpr={ lambda ; fb:f16[1024,512] fc:f16[1024,512]. let
+                fd:f16[1024,512] = mul fb fc
+              in (fd,) }
+            name=sigmoid
+          ] ev ey
+          fe:f16[1024,512] = mul ex fa
+          ff:f16[1024,512] = add_any ez fe
+        in (ff,) }
+      name=silu
+    ] fs bt bu bv
+    fu:f16[1024,12] = dot_general[dimension_numbers=(([1], [0]), ([], []))] ft d
+    fv:f16[512,12] = convert_element_type[new_dtype=float16 weak_type=False] v
+    fw:f16[1024,12] = dot_general[dimension_numbers=(([1], [0]), ([], []))] bw fv
+    fx:f16[1024,12] = add_any fu fw
+    fy:f16[12] = convert_element_type[new_dtype=float16 weak_type=False] w
+    fz:f16[1,12] = broadcast_in_dim[broadcast_dimensions=(1,) shape=(1, 12)] fy
+    ga:f16[1024,12] = add fx fz
+    gb:f32[1024,12] = convert_element_type[new_dtype=float32 weak_type=False] ga
+    gc:f32[1024,12] = pjit[
+      jaxpr={ lambda ; gd:f32[1024,12] ge:f32[1024,12]. let
+          gf:f32[1024,12] = mul gd ge
+        in (gf,) }
+      name=sigmoid
+    ] gb bx
+    gg:f32[1024,12] = mul 0.8999999761581421 gc
+    gh:f32[1,1024,12] = broadcast_in_dim[
+      broadcast_dimensions=(1, 2)
+      shape=(1, 1024, 12)
+    ] gg
+    gi:f32[1,1024,12] = mul bb gh
+    gj:f16[1024,12] = dot_general[dimension_numbers=(([1], [0]), ([], []))] ft e
+    gk:f16[512,12] = convert_element_type[new_dtype=float16 weak_type=False] t
+    gl:f16[1024,12] = dot_general[dimension_numbers=(([1], [0]), ([], []))] bw gk
+    gm:f16[1024,12] = add_any gj gl
+    gn:f16[12] = convert_element_type[new_dtype=float16 weak_type=False] u
+    go:f16[1,12] = broadcast_in_dim[broadcast_dimensions=(1,) shape=(1, 12)] gn
+    gp:f16[1024,12] = add gm go
+    gq:f32[1024,12] = convert_element_type[new_dtype=float32 weak_type=False] gp
+    gr:f32[1024,12] = mul gq by
+    gs:f32[1024,12] = add gq gr
+    gt:f32[1024,12] = mul gs bz
+    gu:f32[1,1024,12] = broadcast_in_dim[
+      broadcast_dimensions=(1, 2)
+      shape=(1, 1024, 12)
+    ] gt
+    gv:f32[1,1024,12] = add gi gu
+    gw:f32[1024,12] = reshape[dimensions=None new_sizes=(1024, 12)] gv
+    gx:f16[1024,1024] = reshape[dimensions=None new_sizes=(1024, 1024)] ba
+    gy:f16[1024,12] = convert_element_type[new_dtype=float16 weak_type=False] x
+    gz:f16[1024,12] = mul gy ca
+    ha:f16[1024,1036] = concatenate[dimension=1] gx gz
+    hb:f16[1024,512] = dot_general[dimension_numbers=(([1], [0]), ([], []))] ha f
+    hc:f32[1024,512] = convert_element_type[new_dtype=float32 weak_type=False] hb
+    hd:f32[1024,512] = pjit[
+      jaxpr={ lambda ; dt:f32[1024,512] du:f32[1024,1] dv:f32[1024,512] dw:f32[1024,512]
+          dx:f32[1024,1] dy:f32[1024,1]. let
+          dz:f32[1024] = reduce_sum[axes=(1,)] dt
+          ea:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] dz
+          eb:f32[1024,1] = div ea 512.0
+          ec:f32[1024,512] = sub dt eb
+          ed:f32[1024,512] = mul ec du
+          ee:f32[1024,512] = mul dt dw
+          ef:f32[1024] = reduce_sum[axes=(1,)] ee
+          eg:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] ef
+          eh:f32[1024,1] = div eg 512.0
+          ei:f32[1024,1] = mul eb dx
+          ej:f32[1024,1] = sub eh ei
+          ek:f32[1024,1] = mul ej dy
+          el:f32[1024,512] = mul dv ek
+          em:f32[1024,512] = add_any ed el
+        in (em,) }
+      name=standardize
+    ] hc cb cc cd ce cf
+    he:f32[1024,512] = mul hd g
+    hf:f16[1024,512] = convert_element_type[new_dtype=float16 weak_type=False] he
+    hg:f16[1024,512] = pjit[
+      jaxpr={ lambda ; ev:f16[1024,512] ew:f16[1024,512] ex:f16[1024,512] ey:f16[1024,512]. let
+          ez:f16[1024,512] = mul ev ew
+          fa:f16[1024,512] = pjit[
+            jaxpr={ lambda ; fb:f16[1024,512] fc:f16[1024,512]. let
+                fd:f16[1024,512] = mul fb fc
+              in (fd,) }
+            name=sigmoid
+          ] ev ey
+          fe:f16[1024,512] = mul ex fa
+          ff:f16[1024,512] = add_any ez fe
+        in (ff,) }
+      name=silu
+    ] hf cg ch ci
+    hh:f16[1024,1024] = concatenate[dimension=1] y hg
+    hi:f16[1024,1536] = dot_general[dimension_numbers=(([1], [0]), ([], []))] hh
+      h
+    hj:f32[1024,1536] = convert_element_type[new_dtype=float32 weak_type=False] hi
+    hk:f32[1024,1536] = pjit[
+      jaxpr={ lambda ; hl:f32[1024,1536] hm:f32[1024,1] hn:f32[1024,1536] ho:f32[1024,1536]
+          hp:f32[1024,1] hq:f32[1024,1]. let
+          hr:f32[1024] = reduce_sum[axes=(1,)] hl
+          hs:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] hr
+          ht:f32[1024,1] = div hs 1536.0
+          hu:f32[1024,1536] = sub hl ht
+          hv:f32[1024,1536] = mul hu hm
+          hw:f32[1024,1536] = mul hl ho
+          hx:f32[1024] = reduce_sum[axes=(1,)] hw
+          hy:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] hx
+          hz:f32[1024,1] = div hy 1536.0
+          ia:f32[1024,1] = mul ht hp
+          ib:f32[1024,1] = sub hz ia
+          ic:f32[1024,1] = mul ib hq
+          id:f32[1024,1536] = mul hn ic
+          ie:f32[1024,1536] = add_any hv id
+        in (ie,) }
+      name=standardize
+    ] hj cj ck cl cm cn
+    if:f32[1024,1536] = mul hk i
+    ig:f16[1024,1536] = convert_element_type[new_dtype=float16 weak_type=False] if
+    ih:f16[1024,512] = slice[
+      limit_indices=(1024, 1536)
+      start_indices=(0, 1024)
+      strides=None
+    ] ig
+    ii:f16[1024,512] = pjit[
+      jaxpr={ lambda ; fb:f16[1024,512] fc:f16[1024,512]. let
+          fd:f16[1024,512] = mul fb fc
+        in (fd,) }
+      name=sigmoid
+    ] ih co
+    ij:f16[1024,512] = mul ii cp
+    ik:f16[1024,512] = slice[
+      limit_indices=(1024, 512)
+      start_indices=(0, 0)
+      strides=None
+    ] ig
+    il:f16[1024,512] = pjit[
+      jaxpr={ lambda ; fb:f16[1024,512] fc:f16[1024,512]. let
+          fd:f16[1024,512] = mul fb fc
+        in (fd,) }
+      name=sigmoid
+    ] ik cr
+    im:f16[1024,512] = mul il cs
+    in:f16[1024,512] = slice[
+      limit_indices=(1024, 1024)
+      start_indices=(0, 512)
+      strides=None
+    ] ig
+    io:f16[1024,512] = mul ct in
+    ip:f16[1024,512] = add_any im io
+    iq:f16[1024,512] = mul ip cp
+    ir:f16[1024,512] = add ip iq
+    is:f16[1024,512] = mul ir cu
+    it:f16[1024,512] = mul cq is
+    iu:f16[1024,512] = add_any ij it
+    iv:f16[1024,512] = neg ii
+    iw:f16[1024,512] = mul iv cv
+    ix:f16[1024,512] = mul cw y
+    iy:f16[1024,512] = add_any iw ix
+    iz:f16[1024,512] = add iu iy
+    ja:f16[1024,512] = dot_general[dimension_numbers=(([1], [0]), ([], []))] iz j
+    jb:f32[1024,512] = convert_element_type[new_dtype=float32 weak_type=False] ja
+    jc:f32[1024,512] = pjit[
+      jaxpr={ lambda ; dt:f32[1024,512] du:f32[1024,1] dv:f32[1024,512] dw:f32[1024,512]
+          dx:f32[1024,1] dy:f32[1024,1]. let
+          dz:f32[1024] = reduce_sum[axes=(1,)] dt
+          ea:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] dz
+          eb:f32[1024,1] = div ea 512.0
+          ec:f32[1024,512] = sub dt eb
+          ed:f32[1024,512] = mul ec du
+          ee:f32[1024,512] = mul dt dw
+          ef:f32[1024] = reduce_sum[axes=(1,)] ee
+          eg:f32[1024,1] = broadcast_in_dim[
+            broadcast_dimensions=(0,)
+            shape=(1024, 1)
+          ] ef
+          eh:f32[1024,1] = div eg 512.0
+          ei:f32[1024,1] = mul eb dx
+          ej:f32[1024,1] = sub eh ei
+          ek:f32[1024,1] = mul ej dy
+          el:f32[1024,512] = mul dv ek
+          em:f32[1024,512] = add_any ed el
+        in (em,) }
+      name=standardize
+    ] jb cx cy cz da db
+    jd:f32[1024,512] = mul jc k
+    je:f16[1024,512] = convert_element_type[new_dtype=float16 weak_type=False] jd
+    jf:f16[1024,512] = pjit[
+      jaxpr={ lambda ; ev:f16[1024,512] ew:f16[1024,512] ex:f16[1024,512] ey:f16[1024,512]. let
+          ez:f16[1024,512] = mul ev ew
+          fa:f16[1024,512] = pjit[
+            jaxpr={ lambda ; fb:f16[1024,512] fc:f16[1024,512]. let
+                fd:f16[1024,512] = mul fb fc
+              in (fd,) }
+            name=sigmoid
+          ] ev ey
+          fe:f16[1024,512] = mul ex fa
+          ff:f16[1024,512] = add_any ez fe
+        in (ff,) }
+      name=silu
+    ] je dc dd de
+    jg:f16[1024,1024] = dot_general[dimension_numbers=(([1], [0]), ([], []))] jf
+      l
+    jh:f16[1024,32,32] = reshape[dimensions=None new_sizes=(1024, 32, 32)] jg
+    ji:f16[1024,32,32] = mul jh df
+    jj:f16[1024,32,32] = div ji dg
+    jk:f32[1024,32,32] = convert_element_type[new_dtype=float32 weak_type=False] ji
+    jl:f32[1024,32] = reduce_sum[axes=(2,)] jk
+    jm:f32[1024,32,1] = broadcast_in_dim[
+      broadcast_dimensions=(0, 1)
+      shape=(1024, 32, 1)
+    ] jl
+    jn:f16[1024,32,1] = convert_element_type[new_dtype=float16 weak_type=False] jm
+    jo:f16[1024,32,1] = neg jn
+    jp:f16[1024,32,32] = mul jo df
+    jq:f16[1024,32,32] = mul jp dh
+    jr:f16[1024,32,32] = add_any jj jq
+    js:f16[1024,32,32] = mul 0.990234375 jr
+    jt:f16[1024,32,32] = div js di
+    ju:f32[1024,32,32] = convert_element_type[new_dtype=float32 weak_type=False] jt
+    jv:f32[1024,32,32] = mul ju dj
+    jw:f32[1024,32] = reduce_sum[axes=(2,)] jv
+    jx:f32[1024,32] = div jw dk
+    jy:f32[1024,32,1] = broadcast_in_dim[
+      broadcast_dimensions=(0, 1)
+      shape=(1024, 32, 1)
+    ] jx
+    jz:f32[1024,32,1] = pjit[
+      jaxpr={ lambda ; ka:f32[1024,32,1] kb:bool[1024,32,1] kc:f32[1024,32,1]. let
+          kd:f32[1024,32,1] = select_n kb ka kc
+        in (kd,) }
+      name=_where
+    ] jy dl m
+    ke:f32[1024,32,32] = sub ju jz
+    kf:f32[1024,32,32] = mul ke dm
+    kg:f32[1024,32,32] = div kf dn
+    kh:f32[1024,32] = reduce_sum[axes=(2,)] kf
+    ki:f32[1024,32,1] = broadcast_in_dim[
+      broadcast_dimensions=(0, 1)
+      shape=(1024, 32, 1)
+    ] kh
+    kj:f32[1024,32,1] = neg ki
+    kk:f32[1024,32,32] = mul kj dm
+    kl:f32[1024,32,32] = mul kk do
+    km:f32[1024,32,32] = add_any kg kl
+    kn:f32[1,1024,32,32] = broadcast_in_dim[
+      broadcast_dimensions=(1, 2, 3)
+      shape=(1, 1024, 32, 32)
+    ] km
+    ko:f32[1024,32,32] = reshape[dimensions=None new_sizes=(1024, 32, 32)] kn
+    kp:f16[1024,32,32] = convert_element_type[new_dtype=float16 weak_type=False] ko
+  in (gw, iz, jt, kp, gw, iz, jt, kp) }, 'linear': (False, False, False, False, False, False, False, False, False, False, False, False, False, True, True, True, True, True, True, True, True, True, True, True, True, True, True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False), 'num_consts': 23, 'num_carry': 4}, effects=set(), source_info=SourceInfo(traceback=<jaxlib.xla_extension.Traceback object at 0x7fce401c1d70>, name_stack=NameStack(stack=(Transform(name='jvp'), Scope(name='wm'), Scope(name='scan')))))}
+Optimizer actor_opt has 1,062,936 variables.
+Optimizer critic_opt has 1,181,439 variables.
+Logdir /fs/cml-projects/Pretrain_MBRL/dreamerv3_exp
+Observation space:
+  reward           Space(dtype=float32, shape=(), low=-inf, high=inf)
+  is_first         Space(dtype=bool, shape=(), low=False, high=True)
+  is_last          Space(dtype=bool, shape=(), low=False, high=True)
+  is_terminal      Space(dtype=bool, shape=(), low=False, high=True)
+  egocentric_state Space(dtype=float64, shape=(44,), low=-inf, high=inf)
+  torso_velocity   Space(dtype=float64, shape=(3,), low=-inf, high=inf)
+  torso_upright    Space(dtype=float64, shape=(1,), low=-inf, high=inf)
+  imu              Space(dtype=float64, shape=(6,), low=-inf, high=inf)
+  force_torque     Space(dtype=float64, shape=(24,), low=-inf, high=inf)
+  image            Space(dtype=uint8, shape=(64, 64, 3), low=0, high=255)
+Action space:
+  reset            Space(dtype=bool, shape=(), low=False, high=True)
+  action           Space(dtype=float32, shape=(12,), low=-1.0, high=1.0)
+Prefill train dataset.
+Prefill eval dataset.
+Found existing checkpoint.
+Loading checkpoint: /fs/cml-projects/Pretrain_MBRL/dreamerv3_exp/dmc_quadruped_run/1/checkpoint.ckpt
+Loaded checkpoint from 1161 seconds ago.
+Start training loop.
+Starting evaluation at step 1100 Counter(1100) 2074
+Tracing policy function.
+╭─────────────────────────────── Traceback (most recent call last) ────────────────────────────────╮
+│ /cmlscratch/xywang/code/dreamerv3/dreamerv3/train.py:207 in <module>                             │
+│                                                                                                  │
+│   204                                                                                            │
+│   205                                                                                            │
+│   206 if __name__ == '__main__':                                                                 │
+│ ❱ 207   main()                                                                                   │
+│   208                                                                                            │
+│                                                                                                  │
+│ /cmlscratch/xywang/code/dreamerv3/dreamerv3/train.py:67 in main                                  │
+│                                                                                                  │
+│    64 │     eval_env = make_envs(config)  # mode='eval'                                          │
+│    65 │     cleanup += [env, eval_env]                                                           │
+│    66 │     agent = agt.Agent(env.obs_space, env.act_space, step, config)                        │
+│ ❱  67 │     embodied.run.train_eval(                                                             │
+│    68 │   │     agent, env, eval_env, replay, eval_replay, logger, args, config)                 │
+│    69 │                                                                                          │
+│    70 │   elif args.script == 'train_holdout':                                                   │
+│                                                                                                  │
+│ /cmlscratch/xywang/code/dreamerv3/dreamerv3/embodied/run/train_eval.py:141 in train_eval         │
+│                                                                                                  │
+│   138 │   if should_eval(step):                                                                  │
+│   139 │     print('Starting evaluation at step', int(step), logger.step, len(train_replay))      │
+│   140 │     driver_eval.reset()                                                                  │
+│ ❱ 141 │     driver_eval(policy_eval, episodes=max(len(eval_env), args.eval_eps))                 │
+│   142 │   driver_train(policy_train, steps=100)                                                  │
+│   143 │   if should_save(step):                                                                  │
+│   144 │     checkpoint.save()                                                                    │
+│                                                                                                  │
+│ /cmlscratch/xywang/code/dreamerv3/dreamerv3/embodied/core/driver.py:42 in __call__               │
+│                                                                                                  │
+│   39   def __call__(self, policy, steps=0, episodes=0):                                          │
+│   40 │   step, episode = 0, 0                                                                    │
+│   41 │   while step < steps or episode < episodes:                                               │
+│ ❱ 42 │     step, episode = self._step(policy, step, episode)                                     │
+│   43                                                                                             │
+│   44   def _step(self, policy, step, episode):                                                   │
+│   45 │   assert all(len(x) == len(self._env) for x in self._acts.values())                       │
+│                                                                                                  │
+│ /cmlscratch/xywang/code/dreamerv3/dreamerv3/embodied/core/driver.py:50 in _step                  │
+│                                                                                                  │
+│   47 │   obs = self._env.step(acts)                                                              │
+│   48 │   obs = {k: convert(v) for k, v in obs.items()}                                           │
+│   49 │   assert all(len(x) == len(self._env) for x in obs.values()), obs                         │
+│ ❱ 50 │   acts, self._state = policy(obs, self._state, **self._kwargs)                            │
+│   51 │   acts = {k: convert(v) for k, v in acts.items()}                                         │
+│   52 │   if obs['is_last'].any():                                                                │
+│   53 │     mask = 1 - obs['is_last']                                                             │
+│                                                                                                  │
+│ /cmlscratch/xywang/code/dreamerv3/dreamerv3/embodied/run/train_eval.py:136 in <lambda>           │
+│                                                                                                  │
+│   133   #     *args, mode='explore' if should_expl(step) else 'train')                           │
+│   134   policy_train = lambda *args: agent.policy(                                               │
+│   135 │   │   *args, mode='train')                                                               │
+│ ❱ 136   policy_eval = lambda *args: agent.policy(*args, mode='eval')                             │
+│   137   while step < args.steps:                                                                 │
+│   138 │   if should_eval(step):                                                                  │
+│   139 │     print('Starting evaluation at step', int(step), logger.step, len(train_replay))      │
+│                                                                                                  │
+│ /cmlscratch/xywang/anaconda3/envs/dreamerv3/lib/python3.9/contextlib.py:79 in inner              │
+│                                                                                                  │
+│    76 │   │   @wraps(func)                                                                       │
+│    77 │   │   def inner(*args, **kwds):                                                          │
+│    78 │   │   │   with self._recreate_cm():                                                      │
+│ ❱  79 │   │   │   │   return func(*args, **kwds)                                                 │
+│    80 │   │   return inner                                                                       │
+│    81                                                                                            │
+│    82                                                                                            │
+│                                                                                                  │
+│ /cmlscratch/xywang/code/dreamerv3/dreamerv3/jaxagent.py:62 in policy                             │
+│                                                                                                  │
+│    59 │     state = tree_map(                                                                    │
+│    60 │   │     np.asarray, state, is_leaf=lambda x: isinstance(x, list))                        │
+│    61 │     state = self._convert_inps(state, self.policy_devices)                               │
+│ ❱  62 │   (outs, state), _ = self._policy(varibs, rng, obs, state, mode=mode)                    │
+│    63 │   outs = self._convert_outs(outs, self.policy_devices)                                   │
+│    64 │   # TODO: Consider keeping policy states in accelerator memory.                          │
+│    65 │   state = self._convert_outs(state, self.policy_devices)                                 │
+│                                                                                                  │
+│ /cmlscratch/xywang/code/dreamerv3/dreamerv3/ninjax.py:199 in wrapper                             │
+│                                                                                                  │
+│   196 │   statics = tuple(sorted([(k, v) for k, v in kw.items() if k in static]))                │
+│   197 │   kw = {k: v for k, v in kw.items() if k not in static}                                  │
+│   198 │   if not hasattr(wrapper, 'keys'):                                                       │
+│ ❱ 199 │     created = init(statics, rng, *args, **kw)                                            │
+│   200 │     wrapper.keys = set(created.keys())                                                   │
+│   201 │     for key, value in created.items():                                                   │
+│   202 │   │   if key not in state:                                                               │
+│                                                                                                  │
+│ /cmlscratch/xywang/anaconda3/envs/dreamerv3/lib/python3.9/site-packages/jax/_src/traceback_util. │
+│ py:166 in reraise_with_filtered_traceback                                                        │
+│                                                                                                  │
+│   163   def reraise_with_filtered_traceback(*args, **kwargs):                                    │
+│   164 │   __tracebackhide__ = True                                                               │
+│   165 │   try:                                                                                   │
+│ ❱ 166 │     return fun(*args, **kwargs)                                                          │
+│   167 │   except Exception as e:                                                                 │
+│   168 │     mode = _filtering_mode()                                                             │
+│   169 │     if _is_under_reraiser(e) or mode == "off":                                           │
+│                                                                                                  │
+│ /cmlscratch/xywang/anaconda3/envs/dreamerv3/lib/python3.9/site-packages/jax/_src/pjit.py:253 in  │
+│ cache_miss                                                                                       │
+│                                                                                                  │
+│    250                                                                                           │
+│    251   @api_boundary                                                                           │
+│    252   def cache_miss(*args, **kwargs):                                                        │
+│ ❱  253 │   outs, out_flat, out_tree, args_flat, jaxpr = _python_pjit_helper(                     │
+│    254 │   │   fun, infer_params_fn, *args, **kwargs)                                            │
+│    255 │   executable = _read_most_recent_pjit_call_executable(jaxpr)                            │
+│    256 │   fastpath_data = _get_fastpath_data(executable, out_tree, args_flat, out_flat)         │
+│                                                                                                  │
+│ /cmlscratch/xywang/anaconda3/envs/dreamerv3/lib/python3.9/site-packages/jax/_src/pjit.py:161 in  │
+│ _python_pjit_helper                                                                              │
+│                                                                                                  │
+│    158                                                                                           │
+│    159                                                                                           │
+│    160 def _python_pjit_helper(fun, infer_params_fn, *args, **kwargs):                           │
+│ ❱  161   args_flat, _, params, in_tree, out_tree, _ = infer_params_fn(                           │
+│    162 │     *args, **kwargs)                                                                    │
+│    163   for arg in args_flat:                                                                   │
+│    164 │   dispatch.check_arg(arg)                                                               │
+│                                                                                                  │
+│ /cmlscratch/xywang/anaconda3/envs/dreamerv3/lib/python3.9/site-packages/jax/_src/api.py:324 in   │
+│ infer_params                                                                                     │
+│                                                                                                  │
+│    321 │   │   donate_argnames=donate_argnames, device=device, backend=backend,                  │
+│    322 │   │   keep_unused=keep_unused, inline=inline, resource_env=None,                        │
+│    323 │   │   abstracted_axes=abstracted_axes)                                                  │
+│ ❱  324 │   return pjit.common_infer_params(pjit_info_args, *args, **kwargs)                      │
+│    325                                                                                           │
+│    326   has_explicit_sharding = pjit._pjit_explicit_sharding(                                   │
+│    327 │     in_shardings, out_shardings, device, backend)                                       │
+│                                                                                                  │
+│ /cmlscratch/xywang/anaconda3/envs/dreamerv3/lib/python3.9/site-packages/jax/_src/pjit.py:491 in  │
+│ common_infer_params                                                                              │
+│                                                                                                  │
+│    488 │     hashable_pytree(in_shardings), in_avals, in_tree, resource_env, dbg,                │
+│    489 │     device_or_backend_set)                                                              │
+│    490                                                                                           │
+│ ❱  491   jaxpr, consts, canonicalized_out_shardings_flat = _pjit_jaxpr(                          │
+│    492 │     flat_fun, hashable_pytree(out_shardings), in_type, dbg,                             │
+│    493 │     device_or_backend_set, HashableFunction(out_tree, closure=()),                      │
+│    494 │     HashableFunction(res_paths, closure=()))                                            │
+│                                                                                                  │
+│ /cmlscratch/xywang/anaconda3/envs/dreamerv3/lib/python3.9/site-packages/jax/_src/pjit.py:969 in  │
+│ _pjit_jaxpr                                                                                      │
+│                                                                                                  │
+│    966                                                                                           │
+│    967 def _pjit_jaxpr(fun, out_shardings_thunk, in_type, debug_info,                            │
+│    968 │   │   │   │   device_or_backend_set, out_tree, result_paths):                           │
+│ ❱  969   jaxpr, final_consts, out_type = _create_pjit_jaxpr(                                     │
+│    970 │     fun, in_type, debug_info, result_paths)                                             │
+│    971   canonicalized_out_shardings_flat = _check_and_canonicalize_out_shardings(               │
+│    972 │     out_shardings_thunk, out_tree, tuple(out_type), jaxpr.jaxpr.debug_info,             │
+│                                                                                                  │
+│ /cmlscratch/xywang/anaconda3/envs/dreamerv3/lib/python3.9/site-packages/jax/_src/linear_util.py: │
+│ 345 in memoized_fun                                                                              │
+│                                                                                                  │
+│   342 │     ans, stores = result                                                                 │
+│   343 │     fun.populate_stores(stores)                                                          │
+│   344 │   else:                                                                                  │
+│ ❱ 345 │     ans = call(fun, *args)                                                               │
+│   346 │     cache[key] = (ans, fun.stores)                                                       │
+│   347 │                                                                                          │
+│   348 │   return ans                                                                             │
+│                                                                                                  │
+│ /cmlscratch/xywang/anaconda3/envs/dreamerv3/lib/python3.9/site-packages/jax/_src/pjit.py:922 in  │
+│ _create_pjit_jaxpr                                                                               │
+│                                                                                                  │
+│    919 │     jaxpr, global_out_avals, consts = pe.trace_to_jaxpr_dynamic2(                       │
+│    920 │   │     lu.annotate(fun, in_type), debug_info=pe_debug)                                 │
+│    921 │   else:                                                                                 │
+│ ❱  922 │     jaxpr, global_out_avals, consts = pe.trace_to_jaxpr_dynamic(                        │
+│    923 │   │     fun, in_type, debug_info=pe_debug)                                              │
+│    924                                                                                           │
+│    925   if not config.jax_dynamic_shapes:                                                       │
+│                                                                                                  │
+│ /cmlscratch/xywang/anaconda3/envs/dreamerv3/lib/python3.9/site-packages/jax/_src/profiler.py:314 │
+│ in wrapper                                                                                       │
+│                                                                                                  │
+│   311   @wraps(func)                                                                             │
+│   312   def wrapper(*args, **kwargs):                                                            │
+│   313 │   with TraceAnnotation(name, **decorator_kwargs):                                        │
+│ ❱ 314 │     return func(*args, **kwargs)                                                         │
+│   315 │   return wrapper                                                                         │
+│   316   return wrapper                                                                           │
+│   317                                                                                            │
+│                                                                                                  │
+│ /cmlscratch/xywang/anaconda3/envs/dreamerv3/lib/python3.9/site-packages/jax/_src/interpreters/pa │
+│ rtial_eval.py:2155 in trace_to_jaxpr_dynamic                                                     │
+│                                                                                                  │
+│   2152 ) -> tuple[Jaxpr, list[AbstractValue], list[Any]]:                                        │
+│   2153   with core.new_main(DynamicJaxprTrace, dynamic=True) as main:  # type: ignore            │
+│   2154 │   main.jaxpr_stack = ()  # type: ignore                                                 │
+│ ❱ 2155 │   jaxpr, out_avals, consts = trace_to_subjaxpr_dynamic(                                 │
+│   2156 │     fun, main, in_avals, keep_inputs=keep_inputs, debug_info=debug_info)                │
+│   2157 │   del main, fun                                                                         │
+│   2158   return jaxpr, out_avals, consts                                                         │
+│                                                                                                  │
+│ /cmlscratch/xywang/anaconda3/envs/dreamerv3/lib/python3.9/site-packages/jax/_src/interpreters/pa │
+│ rtial_eval.py:2177 in trace_to_subjaxpr_dynamic                                                  │
+│                                                                                                  │
+│   2174 │   trace = DynamicJaxprTrace(main, core.cur_sublevel())                                  │
+│   2175 │   in_tracers = _input_type_to_tracers(trace.new_arg, in_avals)                          │
+│   2176 │   in_tracers_ = [t for t, keep in zip(in_tracers, keep_inputs) if keep]                 │
+│ ❱ 2177 │   ans = fun.call_wrapped(*in_tracers_)                                                  │
+│   2178 │   out_tracers = map(trace.full_raise, ans)                                              │
+│   2179 │   jaxpr, consts = frame.to_jaxpr(out_tracers)                                           │
+│   2180 │   del fun, main, trace, frame, in_tracers, out_tracers, ans                             │
+│                                                                                                  │
+│ /cmlscratch/xywang/anaconda3/envs/dreamerv3/lib/python3.9/site-packages/jax/_src/linear_util.py: │
+│ 188 in call_wrapped                                                                              │
+│                                                                                                  │
+│   185 │   gen = gen_static_args = out_store = None                                               │
+│   186 │                                                                                          │
+│   187 │   try:                                                                                   │
+│ ❱ 188 │     ans = self.f(*args, **dict(self.params, **kwargs))                                   │
+│   189 │   except:                                                                                │
+│   190 │     # Some transformations yield from inside context managers, so we have to             │
+│   191 │     # interrupt them before reraising the exception. Otherwise they will only            │
+│                                                                                                  │
+│ /cmlscratch/xywang/code/dreamerv3/dreamerv3/ninjax.py:184 in init                                │
+│                                                                                                  │
+│   181   @bind(jax.jit, static_argnums=[0], **kwargs)                                             │
+│   182   def init(statics, rng, *args, **kw):                                                     │
+│   183 │   # Return only state so JIT can remove dead code for fast initialization.               │
+│ ❱ 184 │   s = fun({}, rng, *args, ignore=True, **dict(statics), **kw)[1]                         │
+│   185 │   return s                                                                               │
+│   186                                                                                            │
+│   187   @bind(jax.jit, static_argnums=[0], **kwargs)                                             │
+│                                                                                                  │
+│ /cmlscratch/xywang/code/dreamerv3/dreamerv3/ninjax.py:95 in purified                             │
+│                                                                                                  │
+│    92 │   │   rng = jax.random.PRNGKey(rng)                                                      │
+│    93 │     context = Context(state.copy(), rng, create, modify, ignore, [], name)               │
+│    94 │     CONTEXT[threading.get_ident()] = context                                             │
+│ ❱  95 │     out = fun(*args, **kwargs)                                                           │
+│    96 │     state = dict(context)                                                                │
+│    97 │     return out, state                                                                    │
+│    98 │   finally:                                                                               │
+│                                                                                                  │
+│ /cmlscratch/xywang/code/dreamerv3/dreamerv3/ninjax.py:380 in wrapper                             │
+│                                                                                                  │
+│   377   def wrapper(self, *args, **kwargs):                                                      │
+│   378 │   with scope(self._path, absolute=True):                                                 │
+│   379 │     with jax.named_scope(self._path.split('/')[-1]):                                     │
+│ ❱ 380 │   │   return method(self, *args, **kwargs)                                               │
+│   381   return wrapper                                                                           │
+│   382                                                                                            │
+│   383                                                                                            │
+│                                                                                                  │
+│ /cmlscratch/xywang/code/dreamerv3/dreamerv3/agent.py:65 in policy                                │
+│                                                                                                  │
+│    62 │   │   prev_latent, prev_action, embed, obs['is_first'])                                  │
+│    63 │   self.expl_behavior.policy(latent, expl_state)                                          │
+│    64 │   task_output, coplanner_actions = self.task_behavior.policy(latent, task_state)         │
+│ ❱  65 │   task_outs, task_state = task_output                                                    │
+│    66 │   expl_outs, expl_state = self.expl_behavior.policy(latent, expl_state)                  │
+│    67 │   if mode == 'eval':                                                                     │
+│    68 │     outs = task_outs                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+UnfilteredStackTrace: ValueError: not enough values to unpack (expected 2, got 1)
+
+The stack trace below excludes JAX-internal frames.
+The preceding is the original exception that occurred, unmodified.
+
+--------------------
+
+The above exception was the direct cause of the following exception:
+
+╭─────────────────────────────── Traceback (most recent call last) ────────────────────────────────╮
+│ /cmlscratch/xywang/code/dreamerv3/dreamerv3/train.py:207 in <module>                             │
+│                                                                                                  │
+│   204                                                                                            │
+│   205                                                                                            │
+│   206 if __name__ == '__main__':                                                                 │
+│ ❱ 207   main()                                                                                   │
+│   208                                                                                            │
+│                                                                                                  │
+│ /cmlscratch/xywang/code/dreamerv3/dreamerv3/train.py:67 in main                                  │
+│                                                                                                  │
+│    64 │     eval_env = make_envs(config)  # mode='eval'                                          │
+│    65 │     cleanup += [env, eval_env]                                                           │
+│    66 │     agent = agt.Agent(env.obs_space, env.act_space, step, config)                        │
+│ ❱  67 │     embodied.run.train_eval(                                                             │
+│    68 │   │     agent, env, eval_env, replay, eval_replay, logger, args, config)                 │
+│    69 │                                                                                          │
+│    70 │   elif args.script == 'train_holdout':                                                   │
+│                                                                                                  │
+│ /cmlscratch/xywang/code/dreamerv3/dreamerv3/embodied/run/train_eval.py:141 in train_eval         │
+│                                                                                                  │
+│   138 │   if should_eval(step):                                                                  │
+│   139 │     print('Starting evaluation at step', int(step), logger.step, len(train_replay))      │
+│   140 │     driver_eval.reset()                                                                  │
+│ ❱ 141 │     driver_eval(policy_eval, episodes=max(len(eval_env), args.eval_eps))                 │
+│   142 │   driver_train(policy_train, steps=100)                                                  │
+│   143 │   if should_save(step):                                                                  │
+│   144 │     checkpoint.save()                                                                    │
+│                                                                                                  │
+│ /cmlscratch/xywang/code/dreamerv3/dreamerv3/embodied/core/driver.py:42 in __call__               │
+│                                                                                                  │
+│   39   def __call__(self, policy, steps=0, episodes=0):                                          │
+│   40 │   step, episode = 0, 0                                                                    │
+│   41 │   while step < steps or episode < episodes:                                               │
+│ ❱ 42 │     step, episode = self._step(policy, step, episode)                                     │
+│   43                                                                                             │
+│   44   def _step(self, policy, step, episode):                                                   │
+│   45 │   assert all(len(x) == len(self._env) for x in self._acts.values())                       │
+│                                                                                                  │
+│ /cmlscratch/xywang/code/dreamerv3/dreamerv3/embodied/core/driver.py:50 in _step                  │
+│                                                                                                  │
+│   47 │   obs = self._env.step(acts)                                                              │
+│   48 │   obs = {k: convert(v) for k, v in obs.items()}                                           │
+│   49 │   assert all(len(x) == len(self._env) for x in obs.values()), obs                         │
+│ ❱ 50 │   acts, self._state = policy(obs, self._state, **self._kwargs)                            │
+│   51 │   acts = {k: convert(v) for k, v in acts.items()}                                         │
+│   52 │   if obs['is_last'].any():                                                                │
+│   53 │     mask = 1 - obs['is_last']                                                             │
+│                                                                                                  │
+│ /cmlscratch/xywang/code/dreamerv3/dreamerv3/embodied/run/train_eval.py:136 in <lambda>           │
+│                                                                                                  │
+│   133   #     *args, mode='explore' if should_expl(step) else 'train')                           │
+│   134   policy_train = lambda *args: agent.policy(                                               │
+│   135 │   │   *args, mode='train')                                                               │
+│ ❱ 136   policy_eval = lambda *args: agent.policy(*args, mode='eval')                             │
+│   137   while step < args.steps:                                                                 │
+│   138 │   if should_eval(step):                                                                  │
+│   139 │     print('Starting evaluation at step', int(step), logger.step, len(train_replay))      │
+│                                                                                                  │
+│ /cmlscratch/xywang/anaconda3/envs/dreamerv3/lib/python3.9/contextlib.py:79 in inner              │
+│                                                                                                  │
+│    76 │   │   @wraps(func)                                                                       │
+│    77 │   │   def inner(*args, **kwds):                                                          │
+│    78 │   │   │   with self._recreate_cm():                                                      │
+│ ❱  79 │   │   │   │   return func(*args, **kwds)                                                 │
+│    80 │   │   return inner                                                                       │
+│    81                                                                                            │
+│    82                                                                                            │
+│                                                                                                  │
+│ /cmlscratch/xywang/code/dreamerv3/dreamerv3/jaxagent.py:62 in policy                             │
+│                                                                                                  │
+│    59 │     state = tree_map(                                                                    │
+│    60 │   │     np.asarray, state, is_leaf=lambda x: isinstance(x, list))                        │
+│    61 │     state = self._convert_inps(state, self.policy_devices)                               │
+│ ❱  62 │   (outs, state), _ = self._policy(varibs, rng, obs, state, mode=mode)                    │
+│    63 │   outs = self._convert_outs(outs, self.policy_devices)                                   │
+│    64 │   # TODO: Consider keeping policy states in accelerator memory.                          │
+│    65 │   state = self._convert_outs(state, self.policy_devices)                                 │
+│                                                                                                  │
+│ /cmlscratch/xywang/code/dreamerv3/dreamerv3/ninjax.py:199 in wrapper                             │
+│                                                                                                  │
+│   196 │   statics = tuple(sorted([(k, v) for k, v in kw.items() if k in static]))                │
+│   197 │   kw = {k: v for k, v in kw.items() if k not in static}                                  │
+│   198 │   if not hasattr(wrapper, 'keys'):                                                       │
+│ ❱ 199 │     created = init(statics, rng, *args, **kw)                                            │
+│   200 │     wrapper.keys = set(created.keys())                                                   │
+│   201 │     for key, value in created.items():                                                   │
+│   202 │   │   if key not in state:                                                               │
+│                                                                                                  │
+│ /cmlscratch/xywang/code/dreamerv3/dreamerv3/ninjax.py:184 in init                                │
+│                                                                                                  │
+│   181   @bind(jax.jit, static_argnums=[0], **kwargs)                                             │
+│   182   def init(statics, rng, *args, **kw):                                                     │
+│   183 │   # Return only state so JIT can remove dead code for fast initialization.               │
+│ ❱ 184 │   s = fun({}, rng, *args, ignore=True, **dict(statics), **kw)[1]                         │
+│   185 │   return s                                                                               │
+│   186                                                                                            │
+│   187   @bind(jax.jit, static_argnums=[0], **kwargs)                                             │
+│                                                                                                  │
+│ /cmlscratch/xywang/code/dreamerv3/dreamerv3/ninjax.py:95 in purified                             │
+│                                                                                                  │
+│    92 │   │   rng = jax.random.PRNGKey(rng)                                                      │
+│    93 │     context = Context(state.copy(), rng, create, modify, ignore, [], name)               │
+│    94 │     CONTEXT[threading.get_ident()] = context                                             │
+│ ❱  95 │     out = fun(*args, **kwargs)                                                           │
+│    96 │     state = dict(context)                                                                │
+│    97 │     return out, state                                                                    │
+│    98 │   finally:                                                                               │
+│                                                                                                  │
+│ /cmlscratch/xywang/code/dreamerv3/dreamerv3/ninjax.py:380 in wrapper                             │
+│                                                                                                  │
+│   377   def wrapper(self, *args, **kwargs):                                                      │
+│   378 │   with scope(self._path, absolute=True):                                                 │
+│   379 │     with jax.named_scope(self._path.split('/')[-1]):                                     │
+│ ❱ 380 │   │   return method(self, *args, **kwargs)                                               │
+│   381   return wrapper                                                                           │
+│   382                                                                                            │
+│   383                                                                                            │
+│                                                                                                  │
+│ /cmlscratch/xywang/code/dreamerv3/dreamerv3/agent.py:65 in policy                                │
+│                                                                                                  │
+│    62 │   │   prev_latent, prev_action, embed, obs['is_first'])                                  │
+│    63 │   self.expl_behavior.policy(latent, expl_state)                                          │
+│    64 │   task_output, coplanner_actions = self.task_behavior.policy(latent, task_state)         │
+│ ❱  65 │   task_outs, task_state = task_output                                                    │
+│    66 │   expl_outs, expl_state = self.expl_behavior.policy(latent, expl_state)                  │
+│    67 │   if mode == 'eval':                                                                     │
+│    68 │     outs = task_outs                                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+ValueError: not enough values to unpack (expected 2, got 1)

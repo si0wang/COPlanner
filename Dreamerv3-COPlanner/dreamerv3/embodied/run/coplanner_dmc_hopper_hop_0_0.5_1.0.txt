@@ -1,0 +1,12 @@
+2023-09-15 20:32:43,640 - n_trajs: 4, horizon: 4, conservative: 0.5, optimistic: 1.0
+2023-09-15 20:32:50,521 - Steps: Counter(1100), Score: 0.0
+2023-09-15 20:32:52,557 - Steps: Counter(1100), Score: 0.0
+2023-09-15 20:33:16,406 - Steps: Counter(1100), Score: 0.0
+2023-09-15 20:36:51,965 - Steps: Counter(1500), Score: 0.0
+2023-09-15 20:39:01,038 - Steps: Counter(2000), Score: 0.0
+2023-09-15 20:41:12,266 - Steps: Counter(2500), Score: 0.00675934215541929
+2023-09-15 20:43:23,090 - Steps: Counter(3000), Score: 0.0
+2023-09-15 20:45:34,380 - Steps: Counter(3500), Score: 0.0
+2023-09-15 20:47:45,041 - Steps: Counter(4000), Score: 0.0
+2023-09-15 21:28:53,845 - n_trajs: 4, horizon: 4, conservative: 0.5, optimistic: 1.0
+2023-09-15 21:29:14,785 - Steps: Counter(0), Score: 0.0

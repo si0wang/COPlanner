@@ -1,0 +1,16 @@
+2023-09-15 20:32:42,040 - n_trajs: 4, horizon: 4, conservative: 0.5, optimistic: 1.0
+2023-09-15 20:32:48,868 - Steps: Counter(1100), Score: 0.0
+2023-09-15 20:32:50,806 - Steps: Counter(1100), Score: 0.0
+2023-09-15 20:33:12,151 - Steps: Counter(1100), Score: 0.0
+2023-09-15 20:36:40,028 - Steps: Counter(1500), Score: 0.0
+2023-09-15 20:38:53,747 - Steps: Counter(2000), Score: 0.0
+2023-09-15 20:41:08,233 - Steps: Counter(2500), Score: 0.0
+2023-09-15 20:43:22,428 - Steps: Counter(3000), Score: 0.0
+2023-09-15 20:45:36,957 - Steps: Counter(3500), Score: 0.0
+2023-09-15 20:47:51,126 - Steps: Counter(4000), Score: 0.0
+2023-09-15 21:32:10,359 - n_trajs: 4, horizon: 4, conservative: 0.5, optimistic: 1.0
+2023-09-15 21:32:30,910 - Steps: Counter(0), Score: 0.0
+2023-09-15 21:36:25,117 - Steps: Counter(500), Score: 0.0
+2023-09-15 21:38:38,233 - Steps: Counter(1000), Score: 0.0
+2023-09-15 21:40:52,014 - Steps: Counter(1500), Score: 0.0
+2023-09-15 21:43:05,720 - Steps: Counter(2000), Score: 0.0011488539166748524

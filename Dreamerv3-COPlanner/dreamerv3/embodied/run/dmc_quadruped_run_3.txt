@@ -1,0 +1,4 @@
+2023-09-15 09:15:44,763 - n_trajs: 6, horizon: 4, conservative: 2, optimistic: 1
+2023-09-15 09:15:53,271 - Steps: Counter(1100), Score: 4.48911241762471
+2023-09-15 09:15:55,781 - Steps: Counter(1100), Score: 2.443610577826803
+2023-09-15 09:33:25,898 - n_trajs: 6, horizon: 4, conservative: 2, optimistic: 1
