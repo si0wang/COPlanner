@@ -1,7 +1,7 @@
 <p align="center">
 
   <h1 align="center">COPlanner: Plan to Roll Out Conservatively but to Explore Optimistically for Model-Based RL</h1>
-  <h2 align="center">ICLR 2024 <a href="[https://openreview.net/forum?id=b1tl3aOt2R2](https://openreview.net/forum?id=jnFcKjtUPN)"></a></h2>
+  <h2 align="center">ICLR 2024 <a href="https://openreview.net/forum?id=jnFcKjtUPN"></a></h2>
   <p align="center">
     <a><strong>Xiyao Wang</strong></a>
     ·
