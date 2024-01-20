@@ -1,5 +1,28 @@
-# COPlanner
+<p align="center">
 
-Code of paper "COPlanner: Plan to Roll Out Conservatively but to Explore Optimistically for Model-Based RL".
+  <h1 align="center">COPlanner: Plan to Roll Out Conservatively but to Explore Optimistically for Model-Based RL</h1>
+  <p align="center">
+    <a><strong>Xiyao Wang</strong></a>
+    ·
+    <a><strong>Ruijie Zheng</strong></a>
+    ·
+    <a><strong>Yanchao Sun</strong></a>
+    ·
+    <a><strong>Ruonan Jia</strong></a>
+    ·
+    <a><strong>Wichayaporn Wongkamjan</strong></a>
+    ·
+    <a><strong>Huazhe Xu</strong></a>
+    ·
+    <a><strong>Furong Huang</strong></a>
+  </p>
 
-Scripts for each environment can be found in README.md of each method's folder.
+</p>
+
+<h3 align="center">
+  <a href="https://arxiv.org/abs/2310.07220"><strong>arXiv</strong></a>
+</h3>
+
+<div align="center">
+  <img src="./docs/coplanner_framework.png" alt="Logo" width="100%">
+</div>
