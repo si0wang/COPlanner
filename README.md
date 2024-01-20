@@ -24,5 +24,5 @@
 </h3>
 
 <div align="center">
-  <img src="./docs/coplanner_framework.png" alt="Logo" width="100%">
+  <img src="/docs/coplanner_framework.png" alt="Logo" width="100%">
 </div>
